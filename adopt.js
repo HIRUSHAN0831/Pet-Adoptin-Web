@@ -10,7 +10,7 @@ const pets = [
     { id: 8, name: "Chloe", type: "Cat", age: "3 years", gender: "Female", image: "images/cat4.jpg" }
 ];
 
-const PETS_PER_PAGE = 8;
+const PETS_PER_PAGE = 6;
 let currentPage = 1;
 
 function displayPets(filteredPets) {
@@ -74,7 +74,6 @@ function filterPets() {
         filteredPets = filteredPets.filter(pet => pet.gender === gender);
     }
 
-    currentPage = 1; // Reset to first page on filter
     displayPets(filteredPets);
 }
 
@@ -85,10 +84,15 @@ function updatePagination(totalPets) {
     document.getElementById('nextPage').disabled = currentPage === totalPages;
 }
 
-document.getElementById('searchInput').addEventListener('input', filterPets);
-document.getElementById('typeFilter').addEventListener('change', filterPets);
-document.getElementById('ageFilter').addEventListener('change', filterPets);
-document.getElementById('genderFilter').addEventListener('change', filterPets);
+function filter(){
+    currentPage = 1; // Reset to first page on filter
+    filterPets();
+}
+
+document.getElementById('searchInput').addEventListener('input', filter);
+document.getElementById('typeFilter').addEventListener('change', filter);
+document.getElementById('ageFilter').addEventListener('change', filter);
+document.getElementById('genderFilter').addEventListener('change', filter);
 
 document.getElementById('clearFilters').addEventListener('click', () => {
     document.getElementById('searchInput').value = '';
