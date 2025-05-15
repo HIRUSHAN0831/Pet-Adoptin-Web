@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Platform - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">PetPals</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adoption.html">Adopttion</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Contact PetPals</h1>
+            <p>We'd love to hear from you! Reach out with any questions or inquiries.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-details">
+                <h2>Contact Information</h2>
+                <div class="detail">
+                    <span class="icon">📧</span>
+                    <p>Email: <a href="mailto:info@petpals.com">info@petpals.com</a></p>
+                </div>
+                <div class="detail">
+                    <span class="icon">📞</span>
+                    <p>Phone: <a href="tel:+1234567890">+94 (234) 567-890</a></p>
+                </div>
+                <div class="detail">
+                    <span class="icon">📍</span>
+                    <p>Address: 123 Pet Lane, Walas City, SP 12345</p>
+                </div>
+                <div class="map-placeholder">
+                    <img src="images/map.png" alt="Map Location" class="map-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 | Designed by <a href="https://www.linkedin.com/in/rashintha-lakshan-a14842291/">Rash Lakshan</a> All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

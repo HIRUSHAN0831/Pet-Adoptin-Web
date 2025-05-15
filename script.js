@@ -1,0 +1,52 @@
+// Sample pet data
+const pets = [
+    { id: 1, name: "Luna", type: "Dog", age: "2 years", image: "images/dog2.jpg" },
+    { id: 2, name: "Milo", type: "Cat", age: "1 year", image: "images/cat2.jpg" },
+    { id: 3, name: "Bella", type: "Dog", age: "3 years", image: "images/dog1.jpg" },
+    { id: 4, name: "Oliver", type: "Cat", age: "2 years", image: "images/cat1.jpg" }
+];
+
+let currentIndex = 0;
+
+function displayCarousel() {
+    const carousel = document.getElementById('petCarousel');
+    carousel.innerHTML = '';
+
+    // Display three pets at a time
+    const visiblePets = [
+        pets[currentIndex % pets.length],
+        pets[(currentIndex + 1) % pets.length],
+        pets[(currentIndex + 2) % pets.length]
+    ];
+
+    visiblePets.forEach(pet => {
+        const petCard = document.createElement('div');
+        petCard.classList.add('pet-card');
+        petCard.innerHTML = `
+            <img src="${pet.image}" alt="${pet.name}">
+            <h3>${pet.name}</h3>
+            <p>Type: ${pet.type}</p>
+            <p>Age: ${pet.age}</p>
+            <a href="details.html?id=${pet.id}" class="btn">View Details</a>
+        `;
+        carousel.appendChild(petCard);
+    });
+}
+
+function moveCarousel(direction) {
+    currentIndex = (currentIndex + direction + pets.length) % pets.length;
+    displayCarousel();
+}
+
+// Newsletter form handling
+document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value;
+    if (email) {
+        alert('Thank you for subscribing!');
+        document.getElementById('newsletterForm').reset();
+    }
+});
+
+// Load carousel on page load
+document.addEventListener('DOMContentLoaded', displayCarousel);
