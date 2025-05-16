@@ -270,7 +270,12 @@ nav ul li {
 .team-card {
     flex: 0 0 33.33%;
     padding: 3.4rem 1rem;
-    text-align: center;
+    justify-content: center;
+    ul {
+        justify-self: center;
+        text-align: left;
+        color: #666;
+    }
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
