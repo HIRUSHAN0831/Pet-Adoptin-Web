@@ -1,10 +1,10 @@
 // Sample pet data (expanded for variety)
 const pets = [
-    { id: 1, name: "Luna", type: "Dog", age: "2 years", gender: "Female", image: "images/dog2.jpg" },
+    { id: 1, name: "Bula", type: "Dog", age: "2 years", gender: "Female", image: "images/dog2.jpg" },
     { id: 2, name: "Milo", type: "Cat", age: "1 year", gender: "Male", image: "images/cat2.jpg" },
-    { id: 3, name: "Bella", type: "Dog", age: "3 years", gender: "Female", image: "images/dog1.jpg" },
+    { id: 3, name: "Shiiba", type: "Dog", age: "3 years", gender: "Female", image: "images/dog1.jpg" },
     { id: 4, name: "Oliver", type: "Cat", age: "2 years", gender: "Male", image: "images/cat1.jpg" },
-    { id: 5, name: "Hirushan", type: "Dog", age: "1 year", gender: "Male", image: "images/hirushan.jpg" },
+    { id: 5, name: "Sasindu", type: "Dog", age: "1 year", gender: "Male", image: "images/hirushan.jpg" },
     { id: 6, name: "Sophie", type: "Cat", age: "4 years", gender: "Female", image: "images/cat3.jpg" },
     { id: 7, name: "Basil", type: "Dog", age: "0.5 years", gender: "Male", image: "images/basil.jpg" },
     { id: 8, name: "Chloe", type: "Cat", age: "3 years", gender: "Female", image: "images/cat4.jpg" }
