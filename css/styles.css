@@ -654,7 +654,7 @@ footer {
         width: 100%;
         padding: 12px 15px;
         border: 1px solid #ccc;
-        border-radius: 8px;
+        border-radius: 4px;
         transition: all 0.3s ease-in-out;
     }
 
