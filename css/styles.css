@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.212);
+    background: rgba(0, 0, 0, 0.212);
     /* background: linear-gradient(90deg, rgba(136, 72, 123, 0.5) 0%, rgba(146,223,226,0.5) 100%); */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(12px);
@@ -44,7 +44,7 @@ nav .logo {
     }
 
     .blue {
-        color: #5CE1E6;
+        color: #02c4fa;
     }
 }
 
@@ -65,7 +65,8 @@ nav ul li {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.527);
+   
     
 }
 
@@ -185,8 +186,8 @@ nav ul li {
 }
 
 .btn {
-    background-color: #e28bcf;
-    color: black;
+    background-color: #02c4fa;
+    color: rgb(0, 36, 216);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -196,8 +197,8 @@ nav ul li {
 }
 
 .btn:hover {
-    background-color: #c075b0;
-    color: black;
+    background-color: #007ee5;
+    color: rgb(253, 253, 253);
     transform: scale(1.05);
 }
 
@@ -213,7 +214,7 @@ nav ul li {
 }
 
 .btn2 {
-    background-color: #5CE1E6;
+    background-color: #02c4fa;
     color: black;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -248,7 +249,7 @@ nav ul li {
 .form-section {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: rgb(246, 233, 243);
+    background-color: rgb(210, 237, 242);
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 5px;
@@ -265,6 +266,10 @@ nav ul li {
 .form-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #0297fa;
+    font-weight: bold;
+   
+
 }
 
 .carousel-container {
