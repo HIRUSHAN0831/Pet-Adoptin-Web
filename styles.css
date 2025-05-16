@@ -28,9 +28,14 @@ nav {
 }
 
 nav .logo {
-    color: #ff00c8;
     font-size: 1.9rem;
     font-weight: bold;
+    .pink{
+    color: #ff00c8;
+    }
+    .blue{
+    color: #5CE1E6;
+    }
 }
 
 nav ul {
@@ -47,6 +52,10 @@ nav ul li {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+}
+
+.act {
+    color: #ff00c8;
 }
 
 .nav-link:hover {
@@ -156,8 +165,25 @@ nav ul li {
     
 }
 
+.btn{
+    background-color: #e171c9;
+    color: black;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 30px;
+}
+
+.btn:hover {
+    background-color: #c060ab;
+    color: black;
+    transform: scale(1.05);
+}
+
 .btn1{
-    background-color: #facc15;
+    background-color: #e171c9;
     color: black;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -168,7 +194,7 @@ nav ul li {
 }
 
 .btn2{
-    background-color: #3b82f6;
+    background-color: #5CE1E6;
     color: black;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -178,15 +204,15 @@ nav ul li {
 }
 
 .btn1:hover {
-    background-color: #eab308;
+    background-color: #c060ab;
     color: black;
-    transform: scale(1.05);
+    padding: 0.9rem 1.6rem;
 }
 
 .btn2:hover {
-    background-color: #2563eb;
+    background-color: #4fc3c7;
     color: black;
-    transform: scale(1.05);
+    padding: 0.9rem 1.6rem;
 }
 
 .btn-spaced {
