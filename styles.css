@@ -50,7 +50,7 @@ nav ul li a:hover {
 
 .hero, .adopt-hero, .about-hero, .contact-hero, .adoption-hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5)), url('images/herobck.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/herobck.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -58,6 +58,9 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
+    position: relative;
+    animation: bgchange 20s linear infinite;
+
 }
 
 @keyframes bgchange{
