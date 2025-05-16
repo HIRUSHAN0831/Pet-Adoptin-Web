@@ -193,7 +193,8 @@ nav ul li {
     border-radius: 25px;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
-    margin-right: 30px;
+    margin: 30px;
+    align-items: center;
 }
 
 .btn:hover {
@@ -230,7 +231,7 @@ nav ul li {
 }
 
 .btn2:hover {
-    background-color: #4fc3c7;
+    background-color: #1979ff;
     color: black;
     padding: 0.9rem 1.6rem;
 }
@@ -249,7 +250,7 @@ nav ul li {
 .form-section {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: rgb(210, 237, 242);
+    background-color: rgb(238, 251, 255);
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 5px;
