@@ -11,7 +11,10 @@ body {
 }
 
 nav {
-    background-color: rgba(255, 239, 254, 0.9);
+    background: rgba(234, 219, 219, 0.3);
+    /* background: linear-gradient(90deg, rgba(136, 72, 123, 0.5) 0%, rgba(146,223,226,0.5) 100%); */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -22,19 +25,25 @@ nav {
     z-index: 1000;
 }
 
-.navbar-brand img{
+.navbar-brand img {
     content: url("images/Pet logo.png");
     height: 55px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.301);
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 nav .logo {
     font-size: 1.9rem;
     font-weight: bold;
-    .pink{
-    color: #ff00c8;
+    text-shadow: 2px 2px 8px rgba(5, 5, 5, 0.301), 0 2px 12px rgba(94, 4, 74, 0.301);
+
+    .pink {
+        color: #ff00c8;
     }
-    .blue{
-    color: #5CE1E6;
+
+    .blue {
+        color: #5CE1E6;
     }
 }
 
@@ -138,17 +147,19 @@ nav ul li {
 .adoption-hero {
     height: 50vh;
 }
-.hero-content h1{
+
+.hero-content h1 {
     font-size: 4rem;
     font-weight: bold;
 
 
 }
+
 .hero-content h1,
 .about-hero h1,
 .contact-hero h1,
 .adoption-hero h1 {
-    
+
     color: #f5c0e9;
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -162,10 +173,10 @@ nav ul li {
     font-size: 1.3rem;
     margin-bottom: 2rem;
     text-align: center;
-    
+
 }
 
-.btn{
+.btn {
     background-color: #e28bcf;
     color: black;
     padding: 0.8rem 1.5rem;
@@ -182,7 +193,7 @@ nav ul li {
     transform: scale(1.05);
 }
 
-.btn1{
+.btn1 {
     background-color: #e171c9;
     color: black;
     padding: 0.8rem 1.5rem;
@@ -193,7 +204,7 @@ nav ul li {
     margin-right: 30px;
 }
 
-.btn2{
+.btn2 {
     background-color: #5CE1E6;
     color: black;
     padding: 0.8rem 1.5rem;
