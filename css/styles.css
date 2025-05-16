@@ -23,7 +23,7 @@ nav {
 }
 
 .navbar-brand img{
-    content: url("images/Pet logo.png");
+    content: url("../images/Pet logo.png");
     height: 55px;
 }
 
@@ -88,7 +88,7 @@ nav ul li {
 .adoption-hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-        url('images/herobck.jpg');
+        url('../images/herobck.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -107,28 +107,28 @@ nav ul li {
     20% {
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-            url('images/herobck.jpg');
+            url('../images/herobck.jpg');
     }
 
     25%,
     45% {
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-            url('images/new1.jpg');
+            url('../images/new1.jpg');
     }
 
     50%,
     70% {
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-            url('images/new3.jpg');
+            url('../images/new3.jpg');
     }
 
     75%,
     95% {
         background-image:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-            url('images/new2.jpg');
+            url('../images/new2.jpg');
     }
 }
 
@@ -433,7 +433,7 @@ footer {
 
 .about-hero {
     height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/herobck.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/herobck.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
