@@ -646,30 +646,27 @@ footer {
     margin-bottom: 6px;
 }
 
+.form-content input,
+.form-content textarea,
+.form-content select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-content input:focus,
+.form-content textarea:focus,
+.form-content select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background-color: #e3f2fd;
+
+}
+
 .form-content {
-
-    input,
-    textarea,
-    select {
-        width: 100%;
-        padding: 12px 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        transition: all 0.3s ease-in-out;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-        border-color: #007bff;
-        outline: none;
-        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-        background-color: #e3f2fd;
-
-    }
-
-
-
 
     .btn {
         width: 30%;
