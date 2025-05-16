@@ -258,7 +258,7 @@ nav ul li {
 .pet-card,
 .team-card {
     flex: 0 0 33.33%;
-    padding: 3.4rem;
+    padding: 3.4rem 1rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -272,7 +272,7 @@ nav ul li {
 .pet-card img,
 .team-card img {
     width: 100%;
-    height: 250px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -412,7 +412,7 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
