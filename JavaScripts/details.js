@@ -24,7 +24,7 @@ function displayPets(filteredPets) {
             <p>Age: ${pet.age}</p>
             <p>Gender: ${pet.gender}</p>
             <p>Breed: ${pet.breed}</p>
-            <p>
+            <p>Features:
                 <ul>
                     <li>${pet.features[0]}</li>
                     <li>${pet.features[1]}</li>
