@@ -654,7 +654,7 @@ footer {
     }
 
 
-    /* Click effect: Blue glow */
+   
     input:focus,
     textarea:focus,
     select:focus {
@@ -662,12 +662,12 @@ footer {
         outline: none;
         box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
         background-color: #e3f2fd;
-        /* Light blue background */
+       
     }
 
-    /* Button hover effect */
+    
     .btn {
-        width: 100%;
+        width: 40%;
         background-color: #007bff;
         color: white;
         border: none;
@@ -678,7 +678,7 @@ footer {
         transition: background 0.3s ease, transform 0.2s ease-in-out;
     }
 
-    /* Button click effect */
+    
     .btn:active {
         background-color: #0056b3;
         transform: scale(0.95);
