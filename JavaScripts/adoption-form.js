@@ -37,7 +37,7 @@ function addPetIds(){
     pets.forEach(pet => {
         const option = document.createElement('option');
         option.value = pet.id;
-        option.textContent = pet.name;
+        option.textContent = `${pet.name}(${pet.type})`;
         petSelect.appendChild(option);
     });
 }
