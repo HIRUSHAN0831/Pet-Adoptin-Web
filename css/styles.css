@@ -647,9 +647,20 @@ footer {
 }
 
 .form-content {
+   input,
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+
 
     .btn {
-        width: 40%;
+        width: 30%;
         background: linear-gradient(0deg, #82b2e4 0%, #007bff 100%);
         line-height: 42px;
         padding: 0;
