@@ -25,13 +25,8 @@ nav {
     z-index: 1000;
 }
 
-<<<<<<< HEAD:styles.css
 .navbar-brand img {
     content: url("images/Pet logo.png");
-=======
-.navbar-brand img{
-    content: url("../images/Pet logo.png");
->>>>>>> 4291f2e7518aa23c1e54c6c83f6b4fdc739c8da6:css/styles.css
     height: 55px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.301);
     border-radius: 50%;
