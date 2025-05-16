@@ -244,9 +244,12 @@ nav ul li {
 .form-section {
     padding: 4rem 1rem;
     text-align: center;
-    background-color: white;
+    background-color: rgb(246, 233, 243);
     font-family: sans-serif;
-    
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.301);
+    margin: 2rem 0;
 }
 
 .pet-carousel h2,
