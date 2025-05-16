@@ -1,11 +1,3 @@
-// Sample pet data
-const pets = [
-    { id: 1, name: "Luna", type: "Dog", age: "2 years", image: "images/dog2.jpg" },
-    { id: 2, name: "Milo", type: "Cat", age: "1 year", image: "images/cat2.jpg" },
-    { id: 3, name: "Bella", type: "Dog", age: "3 years", image: "images/dog1.jpg" },
-    { id: 4, name: "Oliver", type: "Cat", age: "2 years", image: "images/cat1.jpg" }
-];
-
 let currentIndex = 0;
 
 function displayCarousel() {

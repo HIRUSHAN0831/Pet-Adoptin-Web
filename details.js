@@ -1,15 +1,3 @@
-// Sample pet data (expanded for variety)
-const pets = [
-    { id: 1, name: "Bula", type: "Dog", age: "2 years", gender: "Female", image: "images/dog2.jpg" },
-    { id: 2, name: "Milo", type: "Cat", age: "1 year", gender: "Male", image: "images/cat2.jpg" },
-    { id: 3, name: "Shiiba", type: "Dog", age: "3 years", gender: "Female", image: "images/dog1.jpg" },
-    { id: 4, name: "Oliver", type: "Cat", age: "2 years", gender: "Male", image: "images/cat1.jpg" },
-    { id: 5, name: "Sasindu", type: "Dog", age: "1 year", gender: "Male", image: "images/hirushan.jpg" },
-    { id: 6, name: "Sophie", type: "Cat", age: "4 years", gender: "Female", image: "images/cat3.jpg" },
-    { id: 7, name: "Basil", type: "Dog", age: "0.5 years", gender: "Male", image: "images/basil.jpg" },
-    { id: 8, name: "Chloe", type: "Cat", age: "3 years", gender: "Female", image: "images/cat4.jpg" }
-];
-
 const PETS_PER_PAGE = 6;
 let currentPage = 1;
 
@@ -35,7 +23,14 @@ function displayPets(filteredPets) {
             <p>Type: ${pet.type}</p>
             <p>Age: ${pet.age}</p>
             <p>Gender: ${pet.gender}</p>
-            
+            <p>Breed: ${pet.breed}</p>
+            <p>
+                <ul>
+                    <li>${pet.features[0]}</li>
+                    <li>${pet.features[1]}</li>
+                    <li>${pet.features[2]}</li>
+                </ul>
+            </p>
             <a href="adoption.html?petId=${pet.id}" class="btn btn-spaced">Apply to Adopt</a>
         `;
         petGrid.appendChild(petCard);
