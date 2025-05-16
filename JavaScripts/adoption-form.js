@@ -29,8 +29,22 @@ document.getElementById('adoptionForm')?.addEventListener('submit', (e) => {
     document.getElementById('adoptionForm').reset();
 });
 
+function addPetIds(){
+    const petSelect = document.getElementById('petId');
+
+    petSelect.innerHTML = '<option value="">Select a Pet</option>'
+
+    pets.forEach(pet => {
+        const option = document.createElement('option');
+        option.value = pet.id;
+        option.textContent = `${pet.name}(${pet.type})`;
+        petSelect.appendChild(option);
+    });
+}
+
 // Preselect pet based on query parameter
 document.addEventListener('DOMContentLoaded', () => {
+    addPetIds()
     const urlParams = new URLSearchParams(window.location.search);
     const petId = urlParams.get('petId');
     if (petId) {

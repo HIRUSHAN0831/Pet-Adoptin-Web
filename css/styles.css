@@ -241,7 +241,7 @@ nav ul li {
 .team,
 .impact,
 .contact-section,
-.adoption-form-section {
+.form-section {
     padding: 4rem 1rem;
     text-align: center;
     background-color: white;
@@ -255,7 +255,7 @@ nav ul li {
 .team h2,
 .impact h2,
 .contact-section h2,
-.adoption-form-section h2 {
+.form-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -598,14 +598,14 @@ footer {
     margin-bottom: 1rem;
 }
 
-.adoption-form-section {
+.form-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.adoption-form-content {
+.form-content {
     background-color: #ffffff;
     padding: 40px 60px;
     border-radius: 15px;
@@ -615,7 +615,7 @@ footer {
     text-align: center;
 }
 
-.adoption-form-content h2 {
+.form-content h2 {
     color: #007bff;
     font-size: 28px;
     font-weight: bold;
@@ -627,14 +627,14 @@ footer {
     margin-bottom: 20px;
 }
 
-.adoption-form-content label {
+.form-content label {
     display: block;
     font-weight: 600;
     color: #444;
     margin-bottom: 6px;
 }
 
-.adoption-form-content {
+.form-content {
 
     input,
     textarea,
@@ -754,7 +754,7 @@ footer {
     border-radius: 10px;
 }
 
-.adoption-form-content {
+.form-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
@@ -833,7 +833,7 @@ footer {
     .team h2,
     .impact h2,
     .contact-section h2,
-    .adoption-form-section h2 {
+    .form-section h2 {
         font-size: 2rem;
     }
 
