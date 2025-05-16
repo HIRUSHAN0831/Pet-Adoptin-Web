@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: rgba(255, 239, 254, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    color: #ff00c8;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff00c8;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff00c8;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hero,
+.adopt-hero,
+.about-hero,
+.contact-hero,
+.adoption-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+        url('images/herobck.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    animation: bgchange 32s linear infinite;
+    /* font-weight: bold; */
+}
+
+@keyframes bgchange {
+
+    0%,
+    20% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/herobck.jpg');
+    }
+
+    25%,
+    45% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new1.jpg');
+    }
+
+    50%,
+    70% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new3.jpg');
+    }
+
+    75%,
+    95% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new2.jpg');
+    }
+}
+
+.adopt-hero,
+.about-hero,
+.contact-hero,
+.adoption-hero {
+    height: 50vh;
+}
+.hero-content h1{
+    font-size: 4rem;
+    font-weight: bold;
+
+
+}
+.hero-content h1,
+.about-hero h1,
+.contact-hero h1,
+.adoption-hero h1 {
+    
+    color: #f5c0e9;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-content p,
+.about-hero p,
+.contact-hero p,
+.adoption-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.btn-spaced {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.pet-carousel,
+.pet-grid,
+.mission,
+.team,
+.impact,
+.contact-section,
+.adoption-form-section {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: white;
+}
+
+.pet-carousel h2,
+.pet-grid h2,
+.mission h2,
+.team h2,
+.impact h2,
+.contact-section h2,
+.adoption-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.pet-card,
+.team-card {
+    flex: 0 0 33.33%;
+    padding: 3.4rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pet-card:hover,
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card img,
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.pet-card h3,
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pet-card p,
+.team-card p {
+    color: #666;
+}
+
+.pet-card p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn.prev {
+    left: 0px;
+}
+
+.carousel-btn.next {
+    right: 0px;
+}
+
+.newsletter {
+    padding: 3rem 1rem;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter button {
+    padding: 0.8rem 2rem;
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.adopt-controls {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    margin-bottom: 2rem;
+    justify-content: center;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters h3 {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: 500;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.about-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/herobck.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.mission,
+.team,
+.impact {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: white;
+}
+
+.mission h2,
+.team h2,
+.impact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mission-content p {
+    font-size: 1.1rem;
+    color: #333;
+    flex: 1;
+    min-width: 300px;
+}
+
+.mission-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: #666;
+}
+
+.impact-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact-form,
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.contact-form h2,
+.contact-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.adoption-form-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adoption-form-content {
+    background-color: #ffffff;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Click effect: Blue glow */
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+/* Button hover effect */
+.btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Button click effect */
+.btn:active {
+    background-color: #0056b3;
+    transform: scale(0.95);
+}
+
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.detail .icon {
+    font-size: 1.5rem;
+    color: #4caf50;
+    transition: transform 0.3s;
+}
+
+.detail:hover .icon {
+    transform: scale(1.2);
+}
+
+.detail p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.detail a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.detail a:hover {
+    text-decoration: underline;
+}
+
+.map-placeholder {
+    margin-top: 2rem;
+}
+
+.map-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.adoption-form-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update existing media queries */
+@media (max-width: 768px) {
+
+    .hero-content h1,
+    .adopt-hero h1,
+    .about-hero h1,
+    .contact-hero h1,
+    .adoption-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p,
+    .adopt-hero p,
+    .about-hero p,
+    .contact-hero p,
+    .adoption-hero p {
+        font-size: 1.1rem;
+    }
+
+    .pet-card,
+    .team-card {
+        flex: 0 0 100%;
+    }
+
+    .mission-content {
+        flex-direction: column;
+    }
+
+    .mission-image {
+        max-width: 100%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero-content h1,
+    .adopt-hero h1,
+    .about-hero h1,
+    .contact-hero h1,
+    .adoption-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p,
+    .adopt-hero p,
+    .about-hero p,
+    .contact-hero p,
+    .adoption-hero p {
+        font-size: 1rem;
+    }
+
+    .pet-carousel h2,
+    .pet-grid h2,
+    .mission h2,
+    .team h2,
+    .impact h2,
+    .contact-section h2,
+    .adoption-form-section h2 {
+        font-size: 2rem;
+    }
+
+    .stat h3 {
+        font-size: 2rem;
+    }
+
+    .newsletter input,
+    .search-bar input {
+        max-width: 100%;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+}
