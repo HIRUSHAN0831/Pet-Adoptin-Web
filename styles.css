@@ -166,7 +166,7 @@ nav ul li {
 }
 
 .btn{
-    background-color: #e171c9;
+    background-color: #e28bcf;
     color: black;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -177,7 +177,7 @@ nav ul li {
 }
 
 .btn:hover {
-    background-color: #c060ab;
+    background-color: #c075b0;
     color: black;
     transform: scale(1.05);
 }
