@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    background-color: #2e7d32;
+    background-color: rgba(255, 239, 254, 0.9);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ nav {
 }
 
 nav .logo {
-    color: white;
+    color: #ff00c8;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -37,20 +37,44 @@ nav ul li {
     margin-left: 2rem;
 }
 
-nav ul li a {
-    color: white;
+.nav-link {
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #c8e6c9;
+.nav-link:hover {
+    color: #ff00c8;
+    transform: translateY(-2px);
 }
 
-.hero, .adopt-hero, .about-hero, .contact-hero, .adoption-hero {
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff00c8;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* .hero, */
+.adopt-hero,
+.about-hero,
+.contact-hero,
+.adoption-hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/herobck.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+        url('images/herobck.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -58,19 +82,62 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
+    position: relative;
+    animation: bgchange 32s linear infinite;
+    /* font-weight: bold; */
 }
 
-.adopt-hero, .about-hero, .contact-hero, .adoption-hero {
+@keyframes bgchange {
+
+    0%,
+    20% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/herobck.jpg');
+    }
+
+    25%,
+    45% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new1.jpg');
+    }
+
+    50%,
+    70% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new3.jpg');
+    }
+
+    75%,
+    95% {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+            url('images/new2.jpg');
+    }
+}
+
+.adopt-hero,
+.about-hero,
+.contact-hero,
+.adoption-hero {
     height: 50vh;
 }
 
-.hero-content h1, .about-hero h1, .contact-hero h1, .adoption-hero h1 {
+.hero-content h1,
+.about-hero h1,
+.contact-hero h1,
+.adoption-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease-in-out;
 }
 
-.hero-content p, .about-hero p, .contact-hero p, .adoption-hero p {
+.hero-content p,
+.about-hero p,
+.contact-hero p,
+.adoption-hero p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
 }
@@ -95,13 +162,25 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-.pet-carousel, .pet-grid, .mission, .team, .impact, .contact-section, .adoption-form-section {
+.pet-carousel,
+.pet-grid,
+.mission,
+.team,
+.impact,
+.contact-section,
+.adoption-form-section {
     padding: 4rem 1rem;
     text-align: center;
     background-color: white;
 }
 
-.pet-carousel h2, .pet-grid h2, .mission h2, .team h2, .impact h2, .contact-section h2, .adoption-form-section h2 {
+.pet-carousel h2,
+.pet-grid h2,
+.mission h2,
+.team h2,
+.impact h2,
+.contact-section h2,
+.adoption-form-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -118,19 +197,22 @@ nav ul li a:hover {
     transition: transform 0.5s ease-in-out;
 }
 
-.pet-card, .team-card {
+.pet-card,
+.team-card {
     flex: 0 0 33.33%;
     padding: 3.4rem;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.pet-card:hover, .team-card:hover {
+.pet-card:hover,
+.team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.pet-card img, .team-card img {
+.pet-card img,
+.team-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -138,12 +220,14 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
-.pet-card h3, .team-card h3 {
+.pet-card h3,
+.team-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.pet-card p, .team-card p {
+.pet-card p,
+.team-card p {
     color: #666;
 }
 
@@ -155,7 +239,7 @@ nav ul li a:hover {
     position: absolute;
     top: 35%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
     padding: 0.8rem 1rem;
@@ -291,7 +375,7 @@ footer {
 
 .about-hero {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/herobck.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/herobck.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -312,13 +396,17 @@ footer {
     margin-bottom: 2rem;
 }
 
-.mission, .team, .impact {
+.mission,
+.team,
+.impact {
     padding: 4rem 1rem;
     text-align: center;
     background-color: white;
 }
 
-.mission h2, .team h2, .impact h2 {
+.mission h2,
+.team h2,
+.impact h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -362,7 +450,7 @@ footer {
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-card img {
@@ -417,13 +505,15 @@ footer {
     align-items: flex-start;
 }
 
-.contact-form, .contact-details {
+.contact-form,
+.contact-details {
     flex: 1;
     min-width: 300px;
     padding: 1rem;
 }
 
-.contact-form h2, .contact-details h2 {
+.contact-form h2,
+.contact-details h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -440,7 +530,9 @@ footer {
     color: #333;
 }
 
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -449,7 +541,9 @@ footer {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
     border-color: #4caf50;
     outline: none;
 }
@@ -511,6 +605,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -519,15 +614,25 @@ footer {
 
 /* Update existing media queries */
 @media (max-width: 768px) {
-    .hero-content h1, .adopt-hero h1, .about-hero h1, .contact-hero h1, .adoption-hero h1 {
+
+    .hero-content h1,
+    .adopt-hero h1,
+    .about-hero h1,
+    .contact-hero h1,
+    .adoption-hero h1 {
         font-size: 2.5rem;
     }
 
-    .hero-content p, .adopt-hero p, .about-hero p, .contact-hero p, .adoption-hero p {
+    .hero-content p,
+    .adopt-hero p,
+    .about-hero p,
+    .contact-hero p,
+    .adoption-hero p {
         font-size: 1.1rem;
     }
 
-    .pet-card, .team-card {
+    .pet-card,
+    .team-card {
         flex: 0 0 100%;
     }
 
@@ -545,15 +650,30 @@ footer {
 }
 
 @media (max-width: 400px) {
-    .hero-content h1, .adopt-hero h1, .about-hero h1, .contact-hero h1, .adoption-hero h1 {
+
+    .hero-content h1,
+    .adopt-hero h1,
+    .about-hero h1,
+    .contact-hero h1,
+    .adoption-hero h1 {
         font-size: 2rem;
     }
 
-    .hero-content p, .adopt-hero p, .about-hero p, .contact-hero p, .adoption-hero p {
+    .hero-content p,
+    .adopt-hero p,
+    .about-hero p,
+    .contact-hero p,
+    .adoption-hero p {
         font-size: 1rem;
     }
 
-    .pet-carousel h2, .pet-grid h2, .mission h2, .team h2, .impact h2, .contact-section h2, .adoption-form-section h2 {
+    .pet-carousel h2,
+    .pet-grid h2,
+    .mission h2,
+    .team h2,
+    .impact h2,
+    .contact-section h2,
+    .adoption-form-section h2 {
         font-size: 2rem;
     }
 
@@ -561,7 +681,8 @@ footer {
         font-size: 2rem;
     }
 
-    .newsletter input, .search-bar input {
+    .newsletter input,
+    .search-bar input {
         max-width: 100%;
     }
 
