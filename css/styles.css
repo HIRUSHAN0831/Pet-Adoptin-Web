@@ -26,7 +26,7 @@ nav {
 }
 
 .navbar-brand img {
-    content: url("images/Pet logo.png");
+    content: url("../images/Pet logo.png");
     height: 55px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.301);
     border-radius: 50%;
