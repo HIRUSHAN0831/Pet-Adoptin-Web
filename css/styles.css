@@ -843,10 +843,12 @@ footer {
 
     .btn {
         width: 30%;
-        background: linear-gradient(0deg, #cb88d6 0%, #007bff 100%);
+        background: linear-gradient(0deg, #dde0ff 0%, #0067d6 100%);
         line-height: 42px;
         padding: 0;
         border: none;
+        border-radius: 4px;
+        color: #fff;
     }
 
     .btn span {
@@ -859,6 +861,7 @@ footer {
     .btn:before,
     .btn:after {
         position: absolute;
+        color: #007bff;
         content: "";
         right: 0;
         bottom: 0;
@@ -897,6 +900,7 @@ footer {
     .btn span:before,
     .btn span:after {
         position: absolute;
+        color: #007bff;
         content: "";
         left: 0;
         top: 0;
