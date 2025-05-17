@@ -499,7 +499,9 @@ footer {
 
 #mission-card .card {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;   
+  align-items: stretch;
   max-width: 1000px;
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
