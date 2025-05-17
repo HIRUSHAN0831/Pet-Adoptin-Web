@@ -361,6 +361,32 @@ nav ul li {
     transition: transform 0.5s ease-in-out;
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
 .pet-card,
 .team-card {
     /* background-color: #eef5ff; */
@@ -375,6 +401,7 @@ nav ul li {
         color: #666;
     }
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease;
 }
 
 .pet-card:hover,
