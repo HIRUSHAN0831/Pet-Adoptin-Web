@@ -316,7 +316,6 @@ nav ul li {
 
 .pet-carousel,
 .pet-grid,
-.mission,
 .team,
 .impact,
 .contact-section,
@@ -333,7 +332,6 @@ nav ul li {
 
 .pet-carousel h2,
 .pet-grid h2,
-.mission h2,
 .team h2,
 .impact h2,
 .contact-section h2,
@@ -564,8 +562,140 @@ footer {
     font-size: 1.3rem;
     margin-bottom: 2rem;
 }
+#mission-card {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-.mission,
+#mission-card .card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;   
+  align-items: stretch;
+  max-width: 1000px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: fadeInCard 1s ease-in-out;
+}
+
+#mission-card .card-text {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#mission-card .text-frame {
+  border: 2px dashed #b0d0ff;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: inset 0 0 10px rgba(52, 152, 253, 0.1);
+}
+
+#mission-card .card-text h2 {
+  background: linear-gradient(90deg, #3498fd, #9b59b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid #3498fd;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(52, 152, 253, 0.3);
+  animation: slideInLeft 1s ease forwards, glow 3s infinite ease-in-out;
+  opacity: 0;
+}
+
+#mission-card .card-text p {
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-left: 5px solid #3498fd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  letter-spacing: 0.4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+#mission-card .card-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+#mission-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#mission-card .card-image:hover img {
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(52, 152, 253, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(52, 152, 253, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(52, 152, 253, 0.3);
+  }
+}
+/*.mission,
 .team,
 .impact {
     padding: 4rem 1rem;
@@ -602,7 +732,7 @@ footer {
     height: auto;
     border-radius: 10px;
 }
-
+*/
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -917,7 +1047,7 @@ footer {
         flex: 0 0 100%;
     }
 
-    .mission-content {
+    /*.mission-content {
         flex-direction: column;
     }
 
@@ -927,7 +1057,7 @@ footer {
 
     .contact-content {
         flex-direction: column;
-    }
+    }*/
 }
 
 @media (max-width: 400px) {
@@ -950,7 +1080,7 @@ footer {
 
     .pet-carousel h2,
     .pet-grid h2,
-    .mission h2,
+    /*.mission h2,*/
     .team h2,
     .impact h2,
     .contact-section h2,
