@@ -19,7 +19,6 @@ function getelements(){
         document.getElementById('address'),
         document.getElementById('petId'),
         document.getElementById('reason'),
-        document.getElementById('experience')
     ];
     return elements;
 }
