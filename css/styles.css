@@ -325,7 +325,7 @@ nav ul li {
 .impact,
 .contact-section,
 .form-section {
-    padding: 4rem 1rem;
+    padding:  4rem 5rem;
     text-align: center;
     background-color: rgb(238, 251, 255);
     font-family: sans-serif;
@@ -482,7 +482,7 @@ body {
 
 /* Footer Styles */
 .footer {
-  background: linear-gradient(to right, #eef5fe, #edf9ff);
+  background: linear-gradient(to right, #ffe7ff, #edf9ff);
   padding: 3rem 1rem;
   color: #555;
 }
@@ -533,7 +533,7 @@ body {
     line-height: 1;
 }
 .pink{
-    color: #ec4899;
+    color: #ff4da6;
 }
 .blue{
     color: #007bff;
