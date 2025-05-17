@@ -282,8 +282,8 @@ nav ul li {
 }
 
 .btn1 {
-    background-color: #e171c9;
-    color: black;
+    background-color: #d050b2;
+    color: rgb(239, 234, 234);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -294,7 +294,7 @@ nav ul li {
 
 .btn2 {
     background-color: #02c4fa;
-    color: black;
+    color: rgb(249, 243, 243);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -303,14 +303,14 @@ nav ul li {
 }
 
 .btn1:hover {
-    background-color: #c060ab;
-    color: black;
+    background-color: #ffffff;
+    color: rgb(121, 33, 83);
     padding: 0.9rem 1.6rem;
 }
 
 .btn2:hover {
-    background-color: #1979ff;
-    color: black;
+    background-color: #fafbfd;
+    color: rgb(34, 93, 99);
     padding: 0.9rem 1.6rem;
 }
 
