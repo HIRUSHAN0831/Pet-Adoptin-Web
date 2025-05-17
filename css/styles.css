@@ -671,7 +671,7 @@ footer {
 
     .btn {
         width: 30%;
-        background: linear-gradient(0deg, #82b2e4 0%, #007bff 100%);
+        background: linear-gradient(0deg, #cd7adc 0%, #007bff 100%);
         line-height: 42px;
         padding: 0;
         border: none;
@@ -755,40 +755,7 @@ footer {
         width: 100%;
     }
 }
-/* 
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
 
-.form-group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: #4caf50;
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-} */
 
 .detail {
     display: flex;
