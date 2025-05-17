@@ -186,11 +186,12 @@ nav ul li {
     text-align: center;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .step:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #feefff;
 }
 
 .step-icon {
@@ -260,7 +261,7 @@ nav ul li {
 
 .btn {
     background-color: #02c4fa;
-    color: rgb(0, 36, 216);
+    color: rgb(34, 71, 253);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -271,7 +272,7 @@ nav ul li {
 }
 
 .btn:hover {
-    background-color: #007ee5;
+    background-color: #d035de;
     color: rgb(253, 253, 253);
     transform: scale(1.05);
 }
@@ -325,9 +326,9 @@ nav ul li {
     background-color: rgb(238, 251, 255);
     font-family: sans-serif;
     font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.301);
-    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.301);
+    margin: 2rem ;
 }
 
 .pet-carousel h2,
@@ -358,9 +359,9 @@ nav ul li {
 
 .pet-card,
 .team-card {
-    background-color: #eef5ff;
+    /* background-color: #eef5ff; */
     margin-right: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     flex: 0 0 33.33%;
     padding: 3.4rem 1rem;
     justify-content: center;
@@ -376,6 +377,8 @@ nav ul li {
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #d6f6fc;
+    border-radius: 20px;
 }
 
 .pet-card img,
