@@ -484,7 +484,7 @@ body {
 .footer {
   background: linear-gradient(to right, #ffe7ff, #edf9ff);
   padding: 3rem 1rem;
-  color: #555;
+  color: #1b1b1b;
 }
 
 .footer h3 {
@@ -507,10 +507,11 @@ body {
 
 /* Brand Section */
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .brand {
@@ -540,41 +541,27 @@ body {
    
 }
 
-.icon {
-  font-size: 1.5rem;
-  color: #ec4899;
-}
 
-/* Social Links */
+/* Social Links and icons */
 .social-links {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
+    display: flex;
+    gap: 0.9rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background: white;
-  border-radius: 50%;
-  color: #ec4899;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.social-icon:hover {
-  background: #fce7f3;
-  color: #d946ef;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
 }
 
 /* Links */
 .footer a {
-  color: #555;
+  color: #3a3a3a;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -623,6 +610,11 @@ body {
 }
 
 /* Contact Section */
+.contact-section {
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+}
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -631,6 +623,12 @@ body {
 
 .contact-item .icon {
   color: #ec4899;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #ec4899;
+ 
 }
 
 /* Footer Bottom */
@@ -1288,8 +1286,6 @@ footer {
 .detail a:hover {
     text-decoration: underline;
 }
-
-
 
 .form-content {
     max-width: 800px;
