@@ -507,7 +507,7 @@ body {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -579,7 +579,6 @@ body {
     text-decoration-thickness: 2px;
     position: relative;
     text-decoration: none;
-    color: #ec4899;
     transition: color 0.4s;
 }
 
@@ -639,11 +638,11 @@ body {
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 2px solid #f9e2fd;
+  border-top: 1px solid #ff00b36a;
   text-align: center;
   padding-top: 1rem;
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #707171;
 }
 
 .footer-bottom span {
