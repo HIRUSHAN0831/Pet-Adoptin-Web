@@ -813,21 +813,6 @@ footer {
 }
 
 
-.map-container {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
-}
-
-.map-container iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-}
-
-
 
 .form-section {
     width: 100%;
