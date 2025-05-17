@@ -1379,7 +1379,7 @@ footer {
 .impact h2 {
   font-size: 32px;
   margin-bottom: 40px;
-  color: #00ff88;
+  color: #007bff;
 }
 
 .impact-stats {
@@ -1394,8 +1394,8 @@ footer {
   padding: 25px 30px;
   border-radius: 12px;
   width: 160px;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
-  border-bottom: 5px solid #00ff88;
+  box-shadow: 0 0 10px #478dd7 ;
+  border-bottom: 5px solid #007bff;
   transition: transform 0.3s;
 }
 
@@ -1405,7 +1405,7 @@ footer {
 
 .icon {
   font-size: 32px;
-  color: #00ff88;
+  color: #007bff;
   margin-bottom: 10px;
 }
 
