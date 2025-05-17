@@ -832,6 +832,9 @@ footer {
     max-width: 800px;
     width: 90%;
     text-align: center;
+    small {
+        color: red;
+    }
 }
 
 .form-content h2 {
@@ -959,6 +962,12 @@ footer {
 
     .btn span:hover:after {
         width: 100%;
+    }
+    .error {
+        border-color: #ff0000;
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        background-color: #fde3e3;
     }
 }
 
