@@ -264,8 +264,8 @@ nav ul li {
 }
 
 .btn {
-    background-color: #02c4fa;
-    color: rgb(34, 71, 253);
+    background-color: #25737e;
+    color: rgb(254, 255, 255);
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
@@ -276,7 +276,7 @@ nav ul li {
 }
 
 .btn:hover {
-    background-color: #d035de;
+    background-color: #082d2e;
     color: rgb(253, 253, 253);
     transform: scale(1.05);
 }
