@@ -187,6 +187,8 @@ nav ul li {
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+   
+
 }
 
 .step:hover {
@@ -195,20 +197,20 @@ nav ul li {
 }
 
 .step-icon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 16px;
     display: flex;
+    justify-self: center;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto 16px;
-    padding: 16px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+  
+    
 }
 
 .step-title {
     font-size: 1.25rem;
     font-weight: bold;
-    color: #333;
+    color: #191919;
     margin-bottom: 8px;
 }
 
@@ -222,6 +224,8 @@ nav ul li {
     color: #ec4899;
     font-weight: medium;
 }
+
+
 .adopt-hero,
 .about-hero,
 .contact-hero,
