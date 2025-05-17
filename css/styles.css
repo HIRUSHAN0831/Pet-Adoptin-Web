@@ -322,7 +322,11 @@ nav ul li {
 .pet-carousel,
 .pet-grid,
 .team,
-/*.impact,*/
+
+
+
+/* .impact,
+
 .contact-section,
 .form-section {
     padding:  4rem 5rem;
@@ -338,8 +342,10 @@ nav ul li {
 .pet-carousel h2,
 .pet-grid h2,
 .team h2,
+
+
 /*.impact h2,*/
-.contact-section h2,
+/* .contact-section h2,
 .form-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -347,7 +353,7 @@ nav ul li {
     font-weight: bold;
    
 
-}
+} */ 
 
 .carousel-container {
     position: relative;
@@ -1359,16 +1365,24 @@ footer {
         align-items: center;
     }
 }
+
+
+/* Impact Section */
+
+
 .impact-wrapper {
-  background-color: #111;
+  background-color: #ecfaff;
   font-family: 'Arial', sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
   padding: 60px 20px;
+  margin-bottom: 20px;
+box-shadow: 0 8px 32px rgba(0, 123, 255, 0.162);
   display: flex;
   justify-content: center;
 }
 
-    .impact {
+.impact {
   text-align: center;
 }
 
@@ -1376,6 +1390,7 @@ footer {
   font-size: 32px;
   margin-bottom: 40px;
   color: #007bff;
+  font-weight: bold;
 }
 
 .impact-stats {
@@ -1386,12 +1401,12 @@ footer {
 }
 
 .stat {
-  background-color: #1e1e1e;
+  background-color: #d3f7ff;
   padding: 25px 30px;
   border-radius: 12px;
   width: 160px;
   box-shadow: 0 0 10px #478dd7 ;
-  border-bottom: 5px solid #007bff;
+  border-bottom: 5px solid #64adfb;
   transition: transform 0.3s;
 }
 
@@ -1401,7 +1416,7 @@ footer {
 
 .icon {
   font-size: 32px;
-  color: #007bff;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -1413,5 +1428,5 @@ footer {
 .stat p {
   margin-top: 8px;
   font-size: 14px;
-  color: #ccc;
+  color: #000000;
 }
