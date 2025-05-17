@@ -8,9 +8,6 @@ function getGiveAwayElements() {
         document.getElementById('petType'),
         document.getElementById('petAge'),
         document.getElementById('petBreed'),
-        // document.getElementById('petFeatures1'),
-        // document.getElementById('petFeatures2'),
-        // document.getElementById('petFeatures3')
     ];
 }
 function getFeatures() {
@@ -21,21 +18,24 @@ function getFeatures() {
     ];
 }
 
+// Show error message
 function showError(element, message) {
     element.className = 'error';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = message;
 }
 
+// Show success message
 function showSuccess(element) {
     element.className = 'success';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = '';
 }
 
+// Check empty fields
 function checkEmpty(element) {
     if (!element) return true;
-    if (element.value.trim() === '') {
+    if (!element.value.trim()) {
         showError(element, 'This field is required.');
         return false;
     } else {
@@ -44,6 +44,7 @@ function checkEmpty(element) {
     }
 }
 
+// Check phone number
 function checkPhone(element) {
     if (!/^\+?\d{10,15}$/.test(element.value.trim().replace(/\D/g, ''))) {
         showError(element, 'Please enter a valid phone number.');
@@ -54,6 +55,7 @@ function checkPhone(element) {
     }
 }
 
+// Check email
 function checkMail(element) {
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(element.value.trim())) {
         showError(element, 'Enter a valid email address.');
@@ -64,6 +66,7 @@ function checkMail(element) {
     }
 }
 
+//Check Gender
 function checkGender() {
     const radios = document.getElementsByName('petGender');
     let checked = false;
@@ -83,6 +86,7 @@ function checkGender() {
     }
 }
 
+// Check features
 function checkFeatures(feature) {
     let checked = false;
     if (feature.value.trim()) checked = true;
@@ -96,8 +100,28 @@ function checkFeatures(feature) {
     }
 }
 
+// Check image file
+function checkImageFile(input) {
+    const file = input.files[0];
+    if (!file) {
+        showError(input, 'Please select an image file.');
+        return false;
+    }
+    if (!file.type.startsWith('image/')) {
+        showError(input, 'File must be an image.');
+        return false;
+    }
+    if (file.size > 2 * 1024 * 1024) { // 2MB limit
+        showError(input, 'Image must be less than 2MB.');
+        return false;
+    }
+    showSuccess(input);
+    return true;
+}
+
 const form = document.getElementById('giveAwayForm');
 
+// Form submission
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -121,12 +145,18 @@ form?.addEventListener('submit', (e) => {
         isValid = checkFeatures(feature) && isValid;
     }
 
+    // Validate image file
+    const petImageInput = document.getElementById('petImage');
+    isValid = checkImageFile(petImageInput) && isValid;
+
     if (isValid) {
         alert('Thank you for submitting your give away application! We will review it and contact you soon.');
+        updatePetList();
         form.reset();
     }
 });
 
+// Form reset
 form?.addEventListener('reset', () => {
     const elements = getGiveAwayElements();
     for (let element of elements) {
@@ -149,6 +179,13 @@ form?.addEventListener('reset', () => {
         if (!feature) continue;
         feature.parentElement.className = '';
         const msg = feature.parentElement.parentElement.querySelector('small');
+        msg.textContent = '';
+    }
+    // Clear image file error
+    const petImageInput = document.getElementById('petImage');
+    if (petImageInput) {
+        petImageInput.className = '';
+        const msg = petImageInput.parentElement.querySelector('small');
         msg.textContent = '';
     }
 });
@@ -176,4 +213,7 @@ form?.addEventListener('reset', () => {
             checkFeatures(feature);
         });
     });
+    // Image file change
+    const petImageInput = document.getElementById('petImage');
+    petImageInput.addEventListener('blur', () => checkImageFile(petImageInput));
 }
