@@ -322,7 +322,7 @@ nav ul li {
 .pet-carousel,
 .pet-grid,
 .team,
-.impact,
+/*.impact,*/
 .contact-section,
 .form-section {
     padding:  4rem 5rem;
@@ -338,7 +338,7 @@ nav ul li {
 .pet-carousel h2,
 .pet-grid h2,
 .team h2,
-.impact h2,
+/*.impact h2,*/
 .contact-section h2,
 .form-section h2 {
     font-size: 2.5rem;
@@ -950,31 +950,8 @@ footer {
     color: #666;
 }
 
-.impact-stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.stat {
-    flex: 1;
-    min-width: 200px;
-    padding: 1rem;
-}
 
-.stat h3 {
-    font-size: 2.5rem;
-    color: #4caf50;
-    margin-bottom: 0.5rem;
-}
-
-.stat p {
-    font-size: 1.1rem;
-    color: #666;
-}
 .location-wrapper {
   padding: 60px 20px;
   color: #000;
@@ -1364,15 +1341,13 @@ footer {
     .pet-grid h2,
     /*.mission h2,*/
     .team h2,
-    .impact h2,
+    /*.impact h2,*/
     .contact-section h2,
     .form-section h2 {
         font-size: 2rem;
     }
 
-    .stat h3 {
-        font-size: 2rem;
-    }
+
 
     .newsletter input,
     .search-bar input {
@@ -1383,4 +1358,60 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+.impact-wrapper {
+  background-color: #111;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+    .impact {
+  text-align: center;
+}
+
+.impact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stat {
+  background-color: #1e1e1e;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 160px;
+  box-shadow: 0 0 10px #478dd7 ;
+  border-bottom: 5px solid #007bff;
+  transition: transform 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.stat h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.stat p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ccc;
 }

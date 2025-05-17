@@ -30,7 +30,7 @@ function displayCarousel() {
             <h3>${pet.name}</h3>
             <p>Type: ${pet.type}</p>
             <p>Age: ${pet.age}</p>
-            <a href="details.html?id=${pet.id}" class="btn">View Details</a>
+            <a href="details.html?petName=${pet.name}" class="btn">View Details</a>
         `;
         carousel.appendChild(petCard);
     });
