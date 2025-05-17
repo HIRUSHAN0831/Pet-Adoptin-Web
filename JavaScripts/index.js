@@ -1,7 +1,18 @@
 let currentIndex = 0;
 
+function removePetCard(cardElement) {
+  cardElement.classList.add('fade-out');
+  setTimeout(() => {
+    cardElement.remove();
+  }, 1100); // Match the animation duration
+}
+
 function displayCarousel() {
     const carousel = document.getElementById('petCarousel');
+    carousel.querySelectorAll('*').forEach(child => {
+        removePetCard(child);
+    });
+    // removePetCard(carousel);
     carousel.innerHTML = '';
 
     // Display three pets at a time
@@ -39,6 +50,8 @@ document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
         document.getElementById('newsletterForm').reset();
     }
 });
+
+setInterval(() => moveCarousel(1), 10000);
 
 // Load carousel on page load
 document.addEventListener('DOMContentLoaded', displayCarousel);

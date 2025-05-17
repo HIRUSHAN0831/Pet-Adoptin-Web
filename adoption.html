@@ -58,33 +58,40 @@
             <form id="adoptionForm">
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name">
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <textarea id="address" name="address" placeholder="Your Full Address" rows="4" required></textarea>
+                    <textarea id="address" name="address" placeholder="Your Full Address" rows="4"></textarea>
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="petId">Pet to Adopt</label>
-                    <select id="petId" name="petId" required>
-                        
+                    <select id="petId" name="petId">
+                        <!-- Add options with JavaScripts -->
                     </select>
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="reason">Reason for Adoption</label>
-                    <textarea id="reason" name="reason" placeholder="Why do you want to adopt this pet?" rows="5" required></textarea>
+                    <textarea id="reason" name="reason" placeholder="Why do you want to adopt this pet?" rows="5"></textarea>
+                    <small></small>
                 </div>
                 <div class="form-group">
                     <label for="experience">Previous Pet Experience</label>
                     <textarea id="experience" name="experience" placeholder="Describe any experience with pets" rows="4"></textarea>
+                    <small></small>
                 </div>
                 <button type="submit" class="btn"><span>Submit Application</span></button>
                 <button type="reset" class="btn"><span>Reset Application</span></button>
