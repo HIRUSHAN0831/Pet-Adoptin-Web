@@ -1056,7 +1056,6 @@ footer {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     background-color: #e3f2fd;
-
 }
 
 .form-content {
@@ -1164,6 +1163,18 @@ footer {
     }
 }
 
+.form-radio-group {
+    display: flex;
+    margin-bottom: 1rem;
+    input {
+        height: 1rem;
+        width: 1rem;
+        margin: auto 1rem;
+    }
+    label {
+        margin-right: 5rem;
+    }
+}
 
 .detail {
     display: flex;
