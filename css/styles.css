@@ -941,7 +941,13 @@ footer {
         border-color: #ff0000;
         outline: none;
         box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        background-color: #fde3e3;
+        background-color: #fff5f5;
+    }
+    .success {
+        border-color: #28a745;
+        outline: none;
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+        /* background-color: #d4edda; */
     }
 }
 
