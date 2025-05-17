@@ -798,6 +798,9 @@ footer {
     max-width: 800px;
     width: 90%;
     text-align: center;
+    small {
+        color: red;
+    }
 }
 
 .form-content h2 {
@@ -843,10 +846,12 @@ footer {
 
     .btn {
         width: 30%;
-        background: linear-gradient(0deg, #cb88d6 0%, #007bff 100%);
+        background: linear-gradient(0deg, #dde0ff 0%, #0067d6 100%);
         line-height: 42px;
         padding: 0;
         border: none;
+        border-radius: 4px;
+        color: #fff;
     }
 
     .btn span {
@@ -859,6 +864,7 @@ footer {
     .btn:before,
     .btn:after {
         position: absolute;
+        color: #007bff;
         content: "";
         right: 0;
         bottom: 0;
@@ -897,6 +903,7 @@ footer {
     .btn span:before,
     .btn span:after {
         position: absolute;
+        color: #007bff;
         content: "";
         left: 0;
         top: 0;
@@ -925,6 +932,12 @@ footer {
 
     .btn span:hover:after {
         width: 100%;
+    }
+    .error {
+        border-color: #ff0000;
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        background-color: #fde3e3;
     }
 }
 
