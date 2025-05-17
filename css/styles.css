@@ -977,6 +977,89 @@ footer {
     font-size: 1.1rem;
     color: #666;
 }
+.location-wrapper {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Left content (text) */
+.location-text {
+  flex: 1 1 45%;
+}
+
+.location-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+  position: relative;
+  line-height: 1.2;
+}
+
+.location-text h1 span {
+  color: #2b78e4;
+  position: relative;
+}
+
+.location-text h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2b78e4, #00c2ff);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.location-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  max-width: 90%;
+  box-shadow: 0 1px 0 #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* Right content (map) */
+.location-map {
+  flex: 1 1 45%;
+}
+
+.map-frame {
+  background-color: #f2fcff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Map hover effect */
+.map-frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
 
 .contact-content {
     max-width: 1200px;
@@ -1207,16 +1290,7 @@ footer {
     text-decoration: underline;
 }
 
-.map-placeholder {
-    margin-top: 2rem;
-}
 
-.map-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
 
 .form-content {
     max-width: 800px;
