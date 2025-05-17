@@ -39,8 +39,19 @@ function displayPets(filteredPets) {
     updatePagination(filteredPets.length);
 }
 
+function checkId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serchBar = document.getElementById('searchInput');
+    if (urlParams.has('petName')) {
+        serchBar.value = urlParams.get('petName');
+        return urlParams.get('petName').toLocaleLowerCase();
+    }else {
+        return serchBar.value.toLowerCase();
+    }
+}
+
 function filterPets() {
-    const search = document.getElementById('searchInput').value.toLowerCase();
+    let search = checkId();
     const type = document.getElementById('typeFilter').value;
     const age = document.getElementById('ageFilter').value;
     const gender = document.getElementById('genderFilter').value;
@@ -113,4 +124,4 @@ document.getElementById('nextPage').addEventListener('click', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => displayPets(pets));
+document.addEventListener('DOMContentLoaded', () => filterPets(pets));
