@@ -781,7 +781,7 @@ nav ul li {
     color: #ec4899;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
     border-top: 1px solid #ff00b36a;
     text-align: center;
@@ -1017,6 +1017,7 @@ footer {
 #mission-card .card-image:hover img {
     transform: scale(1.05);
 }
+
 
 @keyframes fadeInCard {
     from {
