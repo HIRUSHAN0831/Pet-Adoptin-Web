@@ -803,17 +803,25 @@ nav ul li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background-color: #ff4da6;
 }
 
-.contact-item .icon {
-    color: #ec4899;
-}
+/* .contact-item .icon {
+    color: #b99700;
+} */
 
 .icon {
     font-size: 1.5rem;
     color: #ec4899;
+   
 }
-
+.contact li {
+  
+    padding: 0;
+    margin: 0;
+    line-height: 0.9; /* Ensures no extra space between lines */
+    border: none;   /* Remove any border if present */
+}
 
 .footer-bottom {
     border-top: 1px solid #ff00b36a;
@@ -826,6 +834,8 @@ nav ul li {
 .footer-bottom span {
     color: #ec4899;
 }
+
+
 
 /* ................................................................... */
 .newsletter {
@@ -1259,13 +1269,13 @@ input[type="radio"] {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #000;
+    color: #ec4899;
     position: relative;
     line-height: 1.2;
 }
 
 .location-text h1 span {
-    color: #2b78e4;
+    color: #007bff;
     position: relative;
 }
 
