@@ -873,6 +873,16 @@ footer {
   transform: scale(1.05);
 }
 
+.slider2 {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 .slides2 {
   display: flex;
   width: 400%;
