@@ -657,6 +657,36 @@ nav ul li {
     left: 0px;
 }
 
+/* Pink underline on hover for pet name when hovering the whole pet card */
+.pet-card h3 {
+    position: relative;
+    color: #ec4899;
+}
+
+.pet-card h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -6px;
+    height: 3px;
+    background: #ec4899;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    pointer-events: none;
+}
+
+.pet-card:hover h3::after {
+    transform: scaleX(1);
+}
+
+.pet-card h3:hover::after {
+    transform: scaleX(1);
+}
+
 .carousel-btn.next {
     right: 0px;
 }
