@@ -1275,9 +1275,9 @@ input[type="radio"] {
 .location-text h1::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #2b78e4, #00c2ff);
+    background: linear-gradient(90deg, #ec4899, #007bff);
     margin-top: 10px;
     border-radius: 2px;
 }
