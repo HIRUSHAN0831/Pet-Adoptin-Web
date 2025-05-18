@@ -1018,6 +1018,105 @@ footer {
     transform: scale(1.05);
 }
 
+.slider2 {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slides2 {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: margin-left 0.6s ease;
+}
+
+.slide2 {
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.slide2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+.navigation-manual {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.manual-btn {
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 2px solid #ffffff99;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.manual-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #007bff;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.manual-btn:hover {
+  border-color: #00f0ff;
+  transform: scale(1.2);
+}
+
+
+#radio1:checked ~ .navigation-manual label[for="radio1"]::after,
+#radio2:checked ~ .navigation-manual label[for="radio2"]::after,
+#radio3:checked ~ .navigation-manual label[for="radio3"]::after,
+#radio4:checked ~ .navigation-manual label[for="radio4"]::after {
+  transform: scale(1);
+}
+
+
+#radio1:checked ~ .first {
+  margin-left: 0%;
+}
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
 
 @keyframes fadeInCard {
     from {
