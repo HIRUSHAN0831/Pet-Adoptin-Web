@@ -1,4 +1,5 @@
 /* Responsive Reset & Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +23,7 @@ body {
 }
 
 /* Responsive Utilities */
+
 img, video, iframe {
     max-width: 100%;
     height: auto;
@@ -228,7 +230,7 @@ nav ul {
     }
 }
 
-/* index(home page) */
+/*................... index(home page)..................... */
 /* nav bar section */
 
 nav {
@@ -347,78 +349,6 @@ nav ul li {
     }
 }
 
-.adoption-process {
-    padding: 40px 16px;
-    margin: 0 auto;
-}
-
-.process-title {
-    font-size: 2rem;
-    color: #ec4899;
-    text-align: center;
-    margin-bottom: 32px;
-    font-weight: bold;
-}
-
-.steps-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-}
-
-@media (min-width: 768px) {
-    .steps-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 1024px) {
-    .steps-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.step {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 24px;
-    text-align: center;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-
-.step:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    background-color: #feefff;
-}
-
-.step-icon {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 16px;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-}
-
-.step-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #191919;
-    margin-bottom: 8px;
-}
-
-.step-description {
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.step-number {
-    margin-top: 16px;
-    color: #ec4899;
-    font-weight: medium;
-}
-
 .adopt-hero,
 .about-hero,
 .contact-hero,
@@ -435,7 +365,7 @@ nav ul li {
 .about-hero h1,
 .contact-hero h1,
 .adoption-hero h1 {
-    color: #f5c0e9;
+    color: #fdbcee;
     text-shadow: #444 2px 2px 8px rgba(5, 5, 5, 0.301),
         0 2px 12px rgba(94, 4, 74, 0.301);
     font-size: 3.5rem;
@@ -506,6 +436,77 @@ nav ul li {
 .btn-spaced {
     margin-top: 3rem;
     display: inline-block;
+}
+.adoption-process {
+    padding: 40px 16px;
+    margin: 0 auto;
+}
+
+.process-title {
+    font-size: 2rem;
+    color: #ec4899;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .steps-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 24px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.step:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #feefff;
+}
+
+.step-icon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #191919;
+    margin-bottom: 8px;
+}
+
+.step-description {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.step-number {
+    margin-top: 16px;
+    color: #ec4899;
+    font-weight: medium;
 }
 
 .pet-carousel,
@@ -643,7 +644,7 @@ nav ul li {
     right: 0px;
 }
 
-/*............................ footer ....................................*/
+/*................... footer ........................*/
 
 /* Footer Styles */
 .footer {
