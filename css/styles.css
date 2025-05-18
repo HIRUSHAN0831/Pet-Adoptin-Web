@@ -823,6 +823,10 @@ nav ul li {
     border: none;   /* Remove any border if present */
 }
 
+.pet-card h3 {
+    color: #ec4899;
+}
+
 .footer-bottom {
     border-top: 1px solid #ff00b36a;
     text-align: center;
