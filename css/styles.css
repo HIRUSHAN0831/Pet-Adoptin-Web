@@ -989,8 +989,9 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;   
     align-items: stretch;
-    max-width: 800px;
+    max-width: 750px;
     
+    border: none;
     overflow: hidden;
     animation: fadeInCard 1s ease-in-out;
 }
