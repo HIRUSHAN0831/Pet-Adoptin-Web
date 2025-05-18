@@ -672,7 +672,7 @@ nav ul li {
     left: 0px;
 }
 
-/* Pink underline on hover for pet name when hovering the whole pet card */
+/* Pink short underline on hover for pet name when hovering the whole pet card */
 .pet-card h3 {
     position: relative;
     color: #ec4899;
@@ -682,8 +682,8 @@ nav ul li {
     content: "";
     display: block;
     position: absolute;
-    left: 10%;
-    right: 10%;
+    left: 40%;
+    right: 40%;
     bottom: -6px;
     height: 3px;
     background: #ec4899;
