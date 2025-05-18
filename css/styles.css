@@ -83,22 +83,7 @@ nav ul {
     }
 }
 
-@media (max-width: 900px) {
-    .location-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .location-text, .location-map {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    #mission-card .card {
-        flex-direction: column;
-    }
-    #mission-card .card-image, #mission-card .card-text {
-        padding: 20px;
-    }
-}
+
 
 @media (max-width: 768px) {
     nav {
@@ -980,13 +965,15 @@ footer {
 
 #mission-card {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
     margin: 0;
     padding: 50px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    border: none;
+    background: transparent;
+    
 }
 
 #mission-card .card {
@@ -994,10 +981,8 @@ footer {
     flex-direction: row;
     flex-wrap: nowrap;   
     align-items: stretch;
-    max-width: 1000px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    max-width: 800px;
+    
     overflow: hidden;
     animation: fadeInCard 1s ease-in-out;
 }
@@ -1027,6 +1012,7 @@ footer {
     box-shadow: 0 0 10px rgba(52, 152, 253, 0.3);
     animation: slideInLeft 1s ease forwards, glow 3s infinite ease-in-out;
     opacity: 0;
+    text-align: center;
 }
 
 #mission-card .card-text p {
