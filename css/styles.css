@@ -1262,13 +1262,13 @@ input[type="radio"] {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #000;
+    color: #ec4899;
     position: relative;
     line-height: 1.2;
 }
 
 .location-text h1 span {
-    color: #2b78e4;
+    color: #007bff;
     position: relative;
 }
 
