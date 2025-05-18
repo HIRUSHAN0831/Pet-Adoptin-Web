@@ -7,6 +7,21 @@ function removePetCard(cardElement) {
   }, 1100); // Match the animation duration
 }
 
+function getVisiblePets(carousel) {
+    let noOfCards = 3;
+    if (carousel.offsetWidth < 600) {
+        noOfCards = 2;
+    }
+    if (carousel.offsetWidth < 380) {
+        noOfCards = 1;
+    }
+    let array = [];
+    for (let i = 0; i < noOfCards; i++) {
+        array.push(pets[(currentIndex + i) % pets.length]);
+    }
+    return array;
+}
+
 function displayCarousel() {
     const carousel = document.getElementById('petCarousel');
     carousel.querySelectorAll('*').forEach(child => {
@@ -16,11 +31,7 @@ function displayCarousel() {
     carousel.innerHTML = '';
 
     // Display three pets at a time
-    const visiblePets = [
-        pets[currentIndex % pets.length],
-        pets[(currentIndex + 1) % pets.length],
-        pets[(currentIndex + 2) % pets.length]
-    ];
+    const visiblePets = getVisiblePets(carousel);
 
     visiblePets.forEach(pet => {
         const petCard = document.createElement('div');
@@ -30,7 +41,7 @@ function displayCarousel() {
             <h3>${pet.name}</h3>
             <p>Type: ${pet.type}</p>
             <p>Age: ${pet.age}</p>
-            <a href="details.html?petName=${pet.name}" class="btn">View Details</a>
+            <a href="details.html?petName=${pet.name}" class="btn btn-spaced">View Details</a>
         `;
         carousel.appendChild(petCard);
     });

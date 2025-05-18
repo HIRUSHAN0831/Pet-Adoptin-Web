@@ -460,7 +460,7 @@ nav ul li {
 }
 
 .btn-spaced {
-    margin-top: 3rem;
+    margin: 2rem auto;
     display: inline-block;
 }
 .adoption-process {
@@ -541,7 +541,7 @@ nav ul li {
 .impact,
 .contact-section,
 .form-section {
-    padding:  4rem 5rem;
+    padding:  4rem 5%;
     text-align: center;
     background-color: rgb(238, 251, 255);
     font-family: sans-serif;
@@ -602,7 +602,9 @@ nav ul li {
 
 .pet-card,
 .team-card {
-    margin-right: auto;
+    width: auto;
+    max-width: 300px;
+    margin: auto;
     border-radius: 20px;
     flex: 0 0 33.33%;
     padding: 3.5rem 1rem;
@@ -638,6 +640,10 @@ nav ul li {
 .pet-card p,
 .team-card p {
     color: #666;
+}
+
+.pet-card ul {
+    justify-self: center;
 }
 
 .pet-card p:last-of-type {
@@ -925,10 +931,11 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .pagination {
