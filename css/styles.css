@@ -112,10 +112,17 @@ nav ul {
     .steps-container {
         grid-template-columns: 1fr !important;
     }
-    .pet-card, .team-card {
+    .pet-card{
         padding: 1.5rem 0.5rem;
         flex: 0 0 100%;
     }
+
+    .team-card {
+        padding: 1.5rem 0.5rem;
+        flex: 0 0 100%;
+        width: auto;
+    }
+
     .pet-carousel h2,
     .pet-grid h2,
     .team h2,
@@ -400,6 +407,25 @@ nav ul li {
     transform: scale(1.05);
 }
 
+.btn-us {
+    background-color: rgb(54, 186, 222);
+    color: #fff;
+    padding: 0.3rem 0.9rem;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    align-items: center;
+}
+
+.btn-us:hover {
+    background-color: #055d6f;
+    color: rgb(246, 248, 252);
+    transform: scale(1.05);
+}
+
 .btn1 {
     background-color: #d050b2;
     color: rgb(239, 234, 234);
@@ -579,7 +605,7 @@ nav ul li {
     margin-right: auto;
     border-radius: 20px;
     flex: 0 0 33.33%;
-    padding: 3.4rem 1rem;
+    padding: 3.5rem 1rem;
     justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s;
     animation: fadeIn 1s ease;
@@ -1166,8 +1192,8 @@ input[type="radio"] {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1185,7 +1211,7 @@ input[type="radio"] {
 
 .team-card img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -1304,10 +1330,12 @@ input[type="radio"] {
 }
 
 .form-section {
-    width: 100%;
+    width: 90%;
+    min-width: 340px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:3rem auto;
 }
 
 .form-content {
@@ -1317,6 +1345,7 @@ input[type="radio"] {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 90%;
+    min-width: min-content;
     text-align: center;
     margin: 0 auto;
     padding: 1rem;
