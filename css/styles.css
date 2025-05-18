@@ -110,10 +110,17 @@ nav ul {
     .steps-container {
         grid-template-columns: 1fr !important;
     }
-    .pet-card, .team-card {
+    .pet-card{
         padding: 1.5rem 0.5rem;
         flex: 0 0 100%;
     }
+
+    .team-card {
+        padding: 1.5rem 0.5rem;
+        flex: 0 0 100%;
+        width: auto;
+    }
+
     .pet-carousel h2,
     .pet-grid h2,
     .team h2,
@@ -467,6 +474,24 @@ nav ul li {
 .btn:hover {
     background-color: #e458c4;
     color: rgb(253, 253, 253);
+    transform: scale(1.05);
+}
+
+.btn-us {
+    background-color: rgb(54, 186, 222);
+    color: rgb(254, 255, 255);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 30px;
+    align-items: center;
+}
+
+.btn-us:hover {
+    background-color: #055d6f;
+    color: rgb(246, 248, 252);
     transform: scale(1.05);
 }
 
