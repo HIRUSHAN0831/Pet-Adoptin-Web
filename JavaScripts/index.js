@@ -35,7 +35,7 @@ function displayCarousel() {
 
     visiblePets.forEach(pet => {
         const petCard = document.createElement('div');
-        petCard.classList.add('pet-card');
+        petCard.classList.add('pet-card1');
         petCard.innerHTML = `
             <img src="${pet.image}" alt="${pet.name}">
             <h3>${pet.name}</h3>
