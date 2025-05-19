@@ -1609,6 +1609,11 @@ input[type="radio"] {
     box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
 }
 
+.form-content small {
+    color: red;
+    font-weight: bolder;
+}
+
 .form-radio-group {
     display: flex;
     margin-bottom: 1rem;
