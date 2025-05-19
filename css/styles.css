@@ -1622,7 +1622,13 @@ input[type="radio"] {
 .form-content .success {
     border-color: #28a745;
     outline: none;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+.form-content small {
+    color: red;
+    font-weight: bolder;
 }
 
 .form-radio-group {
