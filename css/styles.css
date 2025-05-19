@@ -421,7 +421,7 @@ nav ul li {
 .btn-us {
     background-color: rgb(54, 186, 222);
     color: #fff;
-    padding: 0.3rem 0.9rem;
+    padding: 0.3rem 0.2rem;
     text-decoration: none;
     border-radius: 7px;
     font-weight: bold;
@@ -616,7 +616,7 @@ nav ul li {
 
 .pet-card,
 .team-card {
-    width: auto;
+    width: 90%;
     max-width: 300px;
     margin: auto;
     border-radius: 20px;
@@ -961,11 +961,17 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    justify-items: center;
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 .pagination {
@@ -1055,7 +1061,7 @@ footer {
     animation: slideInLeft 1s ease forwards, glow 3s infinite ease-in-out;
     opacity: 0;
     text-align: center;
-510}
+}
 
 #mission-card .card-text p {
     background-color: #f0f4ff;
@@ -1437,6 +1443,14 @@ input[type="radio"] {
     background-color: #e3f2fd;
 }
 
+.form-radio-group {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 50px;
+    padding: 10px;
+
+}                      
+
 /* .form-content .btn {
     width: 30%;
     background: linear-gradient(0deg, #dde0ff 0%, #0067d6 100%);
@@ -1585,6 +1599,7 @@ input[type="radio"] {
 .form-content .error {
     border-color: #ff0000;
     outline: none;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     background-color: #fff5f5;
 }
@@ -1699,6 +1714,26 @@ input[type="radio"] {
     margin-top: 8px;
     font-size: 14px;
     color: #000000;
+}
+
+.form-radio-group input[type="radio"] {
+    display: inline-block !important;
+    appearance: auto !important;
+    -webkit-appearance: radio !important;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+    position: static;
+    opacity: 1;
+}
+
+/* Add more space between feature inputs in the give away form */
+#giveAwayForm .form-group ul li {
+    margin-bottom: 16px;
+}
+#giveAwayForm .form-group ul {
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 /*add to card*/

@@ -92,9 +92,13 @@ function checkFeatures(feature) {
     if (feature.value.trim()) checked = true;
     const group = feature.parentElement;
     if (!checked) {
-        showError(group, 'Please add three features.');
+        feature.classList.add('error');
+        feature.classList.remove('success');
+        showError(group, 'This field is required.');
         return false;
     } else {
+        feature.classList.remove('error');
+        feature.classList.add('success');
         showSuccess(group);
         return true;
     }
