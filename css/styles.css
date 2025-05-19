@@ -524,15 +524,15 @@ nav ul li {
 .pet-grid,
 .team,
 .impact,
-.contact-section,
-.form-section {
+.contact-section
+ { 
     padding:  4rem 5%;
     text-align: center;
-    background-color: rgb(238, 251, 255);
+    background-color: rgba(238,251,255);
     font-family: sans-serif;
     font-weight: bold;
     border-radius: 20px;
-    box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.301);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.167);
     margin: 2rem ;
 }
 
@@ -545,6 +545,7 @@ nav ul li {
     margin-bottom: 1rem;
     color: #0297fa;
     font-weight: bold;
+    text-align: center;
 }
 
 .carousel-container {
@@ -1354,34 +1355,39 @@ input[type="radio"] {
 }
 
 .form-content {
-    background-color: #ffffff;
-    padding: 40px 60px;
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 90%;
-    min-width: min-content;
-    text-align: center;
-    margin: 0 auto;
-    padding: 1rem;
+    background: #fff;
+    padding: 48px 52px;
+    margin: 32px 60px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(2, 151, 250, 0.10), 0 1.5px 8px rgba(236, 72, 153, 0.08);
+    border: 1.5px solid #e0e7ef;
+    transition: box-shadow 0.3s;
+}
+.form-content:hover, .form-content:focus-within {
+    box-shadow: 0 12px 36px rgba(2, 151, 250, 0.16), 0 2px 12px rgba(236, 72, 153, 0.12);
 }
 
 .form-content h2 {
     color: #007bff;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .form-group {
-    text-align: left;
-    margin-bottom: 20px;
+    text-align: start;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f2fafd;
+    border-radius: 18px;
 }
 
 .form-content label {
     display: block;
     font-weight: 600;
-    color: #444;
+    color: #2a2a2a;
     margin-bottom: 6px;
 }
 
@@ -1390,8 +1396,8 @@ input[type="radio"] {
 .form-content select {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #0486ff90;
+    border-radius: 18px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1404,7 +1410,7 @@ input[type="radio"] {
     background-color: #e3f2fd;
 }
 
-.form-content .btn {
+/* .form-content .btn {
     width: 30%;
     background: linear-gradient(0deg, #dde0ff 0%, #0067d6 100%);
     line-height: 42px;
@@ -1494,6 +1500,59 @@ input[type="radio"] {
 
 .form-content .btn span:hover:after {
     width: 100%;
+} */
+
+.form-content .submitbtn {
+    border: none;
+    background-color: rgb(0, 172, 3);
+    padding: 10px 24px;
+    border-radius: 18px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.form-content .submitbtn:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+.form-content .resetbtn {
+    border: none;
+    background-color: rgb(255, 0, 0);
+    padding: 10px 24px;
+    border-radius: 18px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-block;
+}
+
+.form-content .resetbtn:hover {
+    background-color: #b30000;
+    transform: scale(1.05);
+}
+
+/* Responsive styles for form buttons */
+@media (max-width: 600px) {
+    .form-content .submitbtn,
+    .form-content .resetbtn {
+        width: 100%;
+        margin: 0 0 0.7rem 0;
+        font-size: 1rem;
+        padding: 12px 0;
+        display: block;
+    }
+    .form-content .submitbtn {
+        margin-bottom: 0.7rem;
+        margin-right: 0;
+    }
 }
 
 .form-content .error {
@@ -1553,6 +1612,7 @@ input[type="radio"] {
 }
 
 /* Impact Section */
+
 .impact-wrapper {
     background-color: #ecfaff;
     font-family: 'Arial', sans-serif;
