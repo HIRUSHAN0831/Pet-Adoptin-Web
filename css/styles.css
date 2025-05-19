@@ -1380,7 +1380,7 @@ input[type="radio"] {
 
 .form-section {
     width: 90%;
-    min-width: 340px;
+    min-width: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1441,15 +1441,7 @@ input[type="radio"] {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     background-color: #e3f2fd;
-}
-
-.form-radio-group {
-    display: flex;
-    margin-bottom: 1rem;
-    gap: 50px;
-    padding: 10px;
-
-}                      
+}                   
 
 /* .form-content .btn {
     width: 30%;
@@ -1617,7 +1609,11 @@ input[type="radio"] {
 
 .form-radio-group {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
+    gap: 10px;
+    padding: 10px;
+    min-width: 150px;
 }
 .form-radio-group input {
     height: 1rem;
@@ -1625,7 +1621,7 @@ input[type="radio"] {
     margin: auto 1rem;
 }
 .form-radio-group label {
-    margin-right: 5rem;
+    margin-right: auto;
 }
 
 .detail {
