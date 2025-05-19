@@ -325,21 +325,7 @@ nav ul li {
     transform-origin: left;
 }
 
-.middle-panel {
-    background-image: url('../images/pawprint.jpg');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* Remove opacity from .middle-panel to avoid affecting children */
-}
 
-.middle-panel .input {
-    background-color: transparent;
-     border: 1px solid #ccc; 
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(5px);
-}
 
 .hero,
 .adopt-hero,
