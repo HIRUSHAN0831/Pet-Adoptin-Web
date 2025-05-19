@@ -239,6 +239,10 @@ nav {
     z-index: 1000;
 }
 
+.navbar-nav.nav-item1 {
+    background-color: yellow;
+   
+}
 .navbar-brand img {
     content: url("../images/Pet logo.png");
     height: 55px;
@@ -264,6 +268,8 @@ nav ul li {
     margin-left: 2rem;
 }
 
+
+
 .nav-link {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -288,11 +294,31 @@ nav ul li {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ff00c8;
+    background-color: #f446ce;
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: right;
 }
+
+
+#donateNavLink {
+    background-color: #ff4da660;
+    color: #fff;
+     padding: 0.5rem 1.4rem; 
+    text-decoration: none;
+     border-radius: 25px; 
+    font-weight: bold;
+    transition: background-color 0.8s, transform 0.2s;}
+
+ #donateNavLink.donate-link:hover {
+    background-color: #ff4da6 !important;
+    color: #fff !important;
+    border-radius: 28px;
+    transition: background 0.2s;
+ }
+ #donateNavLink.donate-link:hover img {
+     filter: brightness(0) invert(1);
+  }
 
 .nav-link:hover::after {
     transform: scaleX(1);
