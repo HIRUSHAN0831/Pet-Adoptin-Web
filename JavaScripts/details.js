@@ -21,7 +21,7 @@ function displayPets(filteredPets) {
             <img src="${pet.image}" alt="${pet.name}">
             <h3>${pet.name}</h3>
             <p>Type: ${pet.type}</p>
-            <p>Age: ${pet.age}</p>
+            <p>Age: ${pet.age} Years</p>
             <p>Gender: ${pet.gender}</p>
             <p>Breed: ${pet.breed}</p>
             <p>Features:
