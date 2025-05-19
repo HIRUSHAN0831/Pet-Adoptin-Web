@@ -1,22 +1,81 @@
-document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+function getContactElements() {
+    return [
+        document.getElementById('name'),
+        document.getElementById('email'),
+        document.getElementById('subject'),
+        document.getElementById('message')
+    ];
+}
+
+function showError(element, message) {
+    element.className = 'error';
+    const msg = element.parentElement.querySelector('small');
+    msg.textContent = message;
+}
+
+function showSuccess(element) {
+    element.className = 'success';
+    const msg = element.parentElement.querySelector('small');
+    msg.textContent = '';
+}
+
+function checkEmpty(element) {
+    if (element.value.trim() === '') {
+        showError(element, 'This field is required.');
+        return false;
+    } else {
+        showSuccess(element);
+        return true;
+    }
+}
+
+function checkMail(element) {
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(element.value.trim())) {
+        showError(element, 'Enter a valid email address.');
+        return false;
+    } else {
+        showSuccess(element);
+        return true;
+    }
+}
+
+const form = document.getElementById('adoptionForm');
+
+form?.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const elements = getContactElements();
+    let isValid = true;
 
-    // Basic validation
-    if (!name || !email || !subject || !message) {
-        alert('Please fill in all fields.');
-        return;
+    for (let element of elements) {
+        isValid = checkEmpty(element) && isValid;
     }
 
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
+    isValid = checkMail(elements[1]) && isValid;
 
-    alert('Thank you for your message! We will get back to you soon.');
-    document.getElementById('contactForm').reset();
+    if (isValid) {
+        alert('Thank you for your message! We will get back to you soon.');
+        form.reset();
+    }
 });
+
+form?.addEventListener('reset', () => {
+    const elements = getContactElements();
+    for (let element of elements) {
+        element.className = '';
+        const msg = element.parentElement.querySelector('small');
+        msg.textContent = '';
+    }
+});
+
+{
+    const elements = getContactElements();
+    elements.forEach(element => {
+        element.addEventListener('blur', () => {
+            checkEmpty(element);
+            if (element.id === 'email') {
+                checkMail(element);
+            }
+        });
+    });
+}

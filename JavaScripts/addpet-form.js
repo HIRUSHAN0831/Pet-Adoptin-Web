@@ -90,16 +90,18 @@ function checkGender() {
 function checkFeatures(feature) {
     let checked = false;
     if (feature.value.trim()) checked = true;
-    const group = feature.parentElement;
+    const group = feature;
     if (!checked) {
         feature.classList.add('error');
         feature.classList.remove('success');
-        showError(group, 'This field is required.');
+        const msg = feature.parentElement.parentElement.querySelector('small');
+        msg.textContent = 'This field is required.';
         return false;
     } else {
         feature.classList.remove('error');
         feature.classList.add('success');
-        showSuccess(group);
+        const msg = feature.parentElement.parentElement.querySelector('small');
+        msg.textContent = '';
         return true;
     }
 }
@@ -181,7 +183,7 @@ form?.addEventListener('reset', () => {
     const features = getFeatures();
     for (let feature of features) {
         if (!feature) continue;
-        feature.parentElement.className = '';
+        feature.className = '';
         const msg = feature.parentElement.parentElement.querySelector('small');
         msg.textContent = '';
     }
