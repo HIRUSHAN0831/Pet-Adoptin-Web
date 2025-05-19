@@ -1443,6 +1443,14 @@ input[type="radio"] {
     background-color: #e3f2fd;
 }
 
+.form-radio-group {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 50px;
+    padding: 10px;
+
+}                      
+
 /* .form-content .btn {
     width: 30%;
     background: linear-gradient(0deg, #dde0ff 0%, #0067d6 100%);
@@ -1591,6 +1599,7 @@ input[type="radio"] {
 .form-content .error {
     border-color: #ff0000;
     outline: none;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     background-color: #fff5f5;
 }
@@ -1705,6 +1714,26 @@ input[type="radio"] {
     margin-top: 8px;
     font-size: 14px;
     color: #000000;
+}
+
+.form-radio-group input[type="radio"] {
+    display: inline-block !important;
+    appearance: auto !important;
+    -webkit-appearance: radio !important;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+    position: static;
+    opacity: 1;
+}
+
+/* Add more space between feature inputs in the give away form */
+#giveAwayForm .form-group ul li {
+    margin-bottom: 16px;
+}
+#giveAwayForm .form-group ul {
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 /*add to card*/
