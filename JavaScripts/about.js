@@ -2,7 +2,7 @@ function animateStats() {
     const stats = [
         { id: 'adoptions', end: 500, duration: 2000 },
         { id: 'volunteers', end: 150, duration: 2000 },
-        { id: 'years', end: 1, duration: 2000 },
+        { id: 'years', end: 3, duration: 2000 },
         { id: 'Available', end: 650, duration: 2000 }
     ];
 
