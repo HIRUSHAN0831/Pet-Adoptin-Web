@@ -1355,6 +1355,7 @@ input[type="radio"] {
 
 .form-content {
     background-color: #ffffff;
+    
     padding: 40px 60px;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
