@@ -1768,6 +1768,7 @@ input[type="radio"] {
 .left-panel h2 {
   margin-bottom: 20px;
   font-size: 24px;
+  
 }
 
 .method {
@@ -1810,8 +1811,8 @@ input[type="radio"] {
 
 .input:focus {
   outline: none;
-  border-color: #7c4dff;
-  box-shadow: 0 0 8px rgba(124, 77, 255, 0.5);
+  border-color: #4d96e9;
+  box-shadow: 0 0 8px rgba(56, 120, 237, 0.5);
 }
 
 .pay-btn {
@@ -1848,4 +1849,17 @@ input[type="radio"] {
 .summary-icons img {
   width: 40px;
   margin-right: 10px;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: center;   /* Center image horizontally */
+  align-items: center;       /* Optional: vertical centering */
+  margin-top: 20px;
+}
+
+.card-icons img {
+  width: 200px;              /* Resize image */
+  height: auto;
+  display: block;            /* Avoid inline spacing issues */
 }

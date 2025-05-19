@@ -63,23 +63,22 @@
     <div class="payment-container">
       
       <div class="left-panel">
-        <h2>Payment<br>Methods</h2>
+        <h5>🐾 Payment Methods</h5>
         <div class="method selected">Payment by card</div>
         <div class="card-icons">
-          <img src="https://img.icons8.com/color/48/visa.png"/>
-          <img src="https://img.icons8.com/color/48/mastercard-logo.png"/>
-          <img src="https://img.icons8.com/color/48/amex.png"/>
-          <img src="https://img.icons8.com/color/48/discover.png"/>
+          <img src="images/card.png">
         </div>
       </div>
 
       <div class="middle-panel">
-        <input type="text" placeholder="Card number" class="input" />
-        <input type="text" placeholder="MM/YY" class="input" />
-        <input type="text" placeholder="CVV" class="input" />
-        <input type="email" placeholder="Email" class="input" />
-        <button class="pay-btn">PAY NOW</button>
-      </div>
+  <input type="text" id="cardNumber" placeholder="Card number" class="input" />
+  <input type="text" id="expiry" placeholder="MM/YY" class="input" />
+  <input type="text" id="cvv" placeholder="CVV" class="input" />
+  <input type="email" id="email" placeholder="Email" class="input" />
+  <button class="pay-btn" id="payBtn">PAY NOW</button>
+  <p style="font-size: 14px; text-align: center; color: #555;">Current Time: <span id="currentTime"></span></p>
+</div>
+
 
       <div class="right-panel">
         <h3>Order Information</h3>
@@ -160,6 +159,76 @@
             </div>
         </div>
     </footer>
-<script src="JavaScripts/donation.js"></script>
+ 
+<script>
+  // Format card number: xxxx xxxx xxxx xxxx
+  const cardInput = document.getElementById("cardNumber");
+  cardInput.addEventListener("input", function () {
+    let value = cardInput.value.replace(/\D/g, "").substring(0, 16);
+    cardInput.value = value
+      .replace(/(\d{4})(?=\d)/g, "$1 ")
+      .trim();
+  });
+
+  // Limit CVV to 3 digits
+  const cvvInput = document.getElementById("cvv");
+  cvvInput.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "").substring(0, 3);
+  });
+
+  // Format MM/YY input
+  const expiryInput = document.getElementById("expiry");
+  expiryInput.addEventListener("input", function () {
+    let value = this.value.replace(/\D/g, "").substring(0, 4);
+    if (value.length >= 3) {
+      value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2");
+    }
+    this.value = value;
+  });
+
+  // Form validation
+  document.getElementById("payBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const card = cardInput.value.replace(/\s/g, "");
+    const cvv = cvvInput.value;
+    const expiry = expiryInput.value;
+    const email = document.getElementById("email").value;
+
+    const cardRegex = /^\d{16}$/;
+    const cvvRegex = /^\d{3}$/;
+    const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!cardRegex.test(card)) {
+      alert("Please enter a valid 16-digit card number.");
+      return;
+    }
+    if (!cvvRegex.test(cvv)) {
+      alert("CVV must be 3 digits.");
+      return;
+    }
+    if (!expiryRegex.test(expiry)) {
+      alert("Please enter a valid expiry date in MM/YY format.");
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email.");
+      return;
+    }
+
+    alert("Payment Successful!");
+  });
+
+  // Show real-time clock
+  function updateTime() {
+    const now = new Date();
+    document.getElementById("currentTime").textContent = now.toLocaleString();
+  }
+
+  setInterval(updateTime, 1000);
+  window.onload = updateTime;
+</script>
+
 </body>
 </html>
