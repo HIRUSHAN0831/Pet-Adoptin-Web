@@ -74,3 +74,5 @@ document.querySelectorAll('.input').forEach(input => {
 
   setInterval(updateTime, 1000);
   window.onload = updateTime;
+
+  
