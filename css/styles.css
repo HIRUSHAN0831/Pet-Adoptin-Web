@@ -1371,7 +1371,7 @@ input[type="radio"] {
 
 .contact-form {
     flex: 1;
-    min-width: 300px;
+    /* min-width: 300px; */
     padding: 1rem;
 }
 
@@ -1648,7 +1648,7 @@ input[type="radio"] {
     padding-left: 0;
 }
 
-/*add to card*/
+
 .main-container {
   display: flex;
   justify-content: center;
@@ -1656,17 +1656,83 @@ input[type="radio"] {
   min-height: 100vh;
   background: radial-gradient(circle, #cfd8dc, #90a4ae);
   font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
 }
 
 .payment-container {
   display: flex;
-  width: 90%;
+  width: 95%;
   max-width: 1100px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.payment-container:hover {
+  transform: scale(1.01);
+}
+
+.left-panel {
+  width: 25%;
+  background: linear-gradient(145deg, #f1f8e9, #e0f2f1);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #e0e0e0;
+  box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h5 {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.method-selected {
+  background-color: #c5e1a5;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #2e7d32;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  
+}
+
+
+.card-icons {
+  margin-top: 20px;
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+.card-icons img {
+  width: 160px;
+  max-width: 100%;
+  border-radius: 14px;
+ 
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.card-icons img:hover {
+  transform: rotateY(10deg) scale(1.03);
+  
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 
 .left-panel, .middle-panel, .right-panel {
   padding: 30px;
