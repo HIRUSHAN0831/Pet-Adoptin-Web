@@ -38,10 +38,12 @@ function displayCarousel() {
         petCard.classList.add('pet-card');
         petCard.innerHTML = `
             <img src="${pet.image}" alt="${pet.name}">
-            <h3>${pet.name}</h3>
-            <p>Type: ${pet.type}</p>
-            <p>Age: ${pet.age}</p>
-            <a href="details.html?petName=${pet.name}" class="btn btn-spaced">View Details</a>
+            <div class="pet-details">
+                <h3>${pet.name}</h3>
+                <p>Type: ${pet.type}</p>
+                <p>Age: ${pet.age}</p>
+                <a href="details.html?petName=${pet.name}" class="btn btn-spaced">View Details</a>
+            </div>
         `;
         carousel.appendChild(petCard);
     });

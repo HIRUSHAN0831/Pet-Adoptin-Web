@@ -325,6 +325,10 @@ nav ul li {
     transform-origin: left;
 }
 
+.navbar-toggler {
+    border: solid 1px rgba(255, 255, 255, 0.25);
+}
+
 
 
 .hero,
@@ -588,6 +592,8 @@ nav ul li {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    gap: 1rem;
+    padding: 1rem 1rem;
 }
 
 @keyframes fadeOut {
@@ -616,7 +622,6 @@ nav ul li {
     animation: fadeOut 1s forwards;
 }
 
-.pet-card,
 .team-card {
     width: 90%;
     max-width: 300px;
@@ -630,7 +635,6 @@ nav ul li {
     text-align: center;
 }
 
-.pet-card:hover,
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -638,7 +642,6 @@ nav ul li {
     border-radius: 20px;
 }
 
-.pet-card img,
 .team-card img {
     width: 100%;
     height: auto;
@@ -647,23 +650,145 @@ nav ul li {
     margin-bottom: 1rem;
 }
 
-.pet-card h3,
 .team-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.pet-card p,
 .team-card p {
     color: #666;
 }
 
-.pet-card ul {
-    justify-self: center;
+
+.pet-card,
+.pet-card1 {
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    margin: auto;
+    border-radius: 20px;
+    padding: 0;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
 }
 
-.pet-card p:last-of-type {
-    margin-bottom: 2rem;
+.pet-card img,
+.pet-card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    transition: filter 0.4s;
+}
+
+.pet-card .pet-details,
+.pet-card1 .pet-details {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 0.5rem 1rem ;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    height: 100%;
+}
+
+.pet-card .pet-details {
+    height: 50%;
+}
+
+.pet-card1:hover{
+    transform: scale(1.4);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.pet-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.pet-card:hover img,
+.pet-card1:hover img {
+    filter: blur(1px) brightness(0.95);
+}
+
+.pet-card:hover .pet-details,
+.pet-card1:hover .pet-details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pet-card .pet-details p,
+.pet-card .pet-details ul,
+.pet-card .pet-details a,
+.pet-card1 .pet-details p,
+.pet-card1 .pet-details ul,
+.pet-card1 .pet-details a {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    margin: auto;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.pet-card1 h3 {
+    position: absolute;
+    bottom: 0; left: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    opacity: 1;
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.pet-card:hover h3
+.pet-card1:hover h3 {
+    opacity: 0;
+}
+
+.pet-card .pet-details ul,
+.pet-card1 .pet-details ul {
+    margin: 0 0 0 1.2rem;
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.pet-card .pet-details a.btn,
+.pet-card1 .pet-details a.btn {
+    margin-top: 0.2rem;
+    background: #02c4fa;
+    color: #fff;
+    border-radius: 18px;
+    padding: 0.3rem 0.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.pet-card .pet-details a.btn:hover,
+.pet-card1 .pet-details a.btn:hover {
+    background: #e458c4;
+    color: #fff;
+    transform: scale(1.07);
 }
 
 .carousel-btn {
@@ -686,14 +811,6 @@ nav ul li {
 
 .carousel-btn.prev {
     left: 0px;
-}
-
-.pet-card:hover h3::after {
-    transform: scaleX(1);
-}
-
-.pet-card h3:hover::after {
-    transform: scaleX(1);
 }
 
 .carousel-btn.next {
@@ -1885,6 +2002,7 @@ input[type="radio"] {
   border-radius: 8px;
   transition: all 0.3s;
   font-size: 16px;
+  width: 100%;
 }
 
 .input:focus {

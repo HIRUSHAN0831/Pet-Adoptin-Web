@@ -16,22 +16,24 @@ function displayPets(filteredPets) {
 
     paginatedPets.forEach(pet => {
         const petCard = document.createElement('div');
-        petCard.classList.add('pet-card');
+        petCard.classList.add('pet-card1');
         petCard.innerHTML = `
             <img src="${pet.image}" alt="${pet.name}">
             <h3>${pet.name}</h3>
-            <p>Type: ${pet.type}</p>
-            <p>Age: ${pet.age} Years</p>
-            <p>Gender: ${pet.gender}</p>
-            <p>Breed: ${pet.breed}</p>
-            <p>Features:
-                <ul>
+            <div class="pet-details">
+                <p>Type: ${pet.type}</p>
+                <p>Age: ${pet.age} Years</p>
+                <p>Gender: ${pet.gender}</p>
+                <p>Breed: ${pet.breed}</p>
+                <p>Features:
+                    <ul>
                     <li>${pet.features[0]}</li>
                     <li>${pet.features[1]}</li>
                     <li>${pet.features[2]}</li>
-                </ul>
-            </p>
-            <a href="adoption.html?petId=${pet.id}" class="btn btn-spaced">Apply to Adopt</a>
+                    </ul>
+                </p>
+                <a href="adoption.html?petId=${pet.id}" class="btn btn-spaced">Apply to Adopt</a>
+            </div>
         `;
         petGrid.appendChild(petCard);
     });
@@ -107,6 +109,9 @@ document.getElementById('clearFilters').addEventListener('click', () => {
     document.getElementById('genderFilter').value = 'all';
     currentPage = 1;
     displayPets(pets);
+    if (window.location.search) {
+        window.location.href = window.location.pathname;
+    }
 });
 
 document.getElementById('prevPage').addEventListener('click', () => {
