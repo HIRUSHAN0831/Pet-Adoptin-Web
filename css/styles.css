@@ -1371,7 +1371,7 @@ input[type="radio"] {
 
 .contact-form {
     flex: 1;
-    min-width: 300px;
+    /* min-width: 300px; */
     padding: 1rem;
 }
 
