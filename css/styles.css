@@ -1785,6 +1785,7 @@ input[type="radio"] {
   border-radius: 8px;
   transition: all 0.3s;
   font-size: 16px;
+  width: 100%;
 }
 
 .input:focus {
