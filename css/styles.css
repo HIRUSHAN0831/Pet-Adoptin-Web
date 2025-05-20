@@ -666,6 +666,117 @@ nav ul li {
     margin-bottom: 2rem;
 }
 
+.pet-card1 {
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    margin: auto;
+    border-radius: 20px;
+    /* flex: 0 0 33.33%; */
+    padding: 0;
+    /* padding: 3.5rem 1rem; */
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+}
+
+.pet-card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    transition: filter 0.4s;
+}
+
+.pet-card1 .pet-details {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 0.5rem 1rem ;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    height: 100%;
+}
+
+.pet-card1:hover{
+    transform: scale(1.4);
+    z-index: 10;
+}
+
+.pet-card1:hover img {
+    filter: blur(1px) brightness(0.95);
+}
+
+.pet-card1:hover .pet-details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* .pet-card1 .pet-details h3, */
+.pet-card1 .pet-details p,
+.pet-card1 .pet-details ul,
+.pet-card1 .pet-details a {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    margin: auto;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.pet-card1 h3 {
+    position: absolute;
+    bottom: 0; left: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    opacity: 1;
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.pet-card1:hover h3 {
+    opacity: 0;
+}
+
+.pet-card1 .pet-details ul {
+    margin: 0 0 0 1.2rem;
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.pet-card1 .pet-details a.btn {
+    margin-top: 0.2rem;
+    background: #02c4fa;
+    color: #fff;
+    border-radius: 18px;
+    padding: 0.3rem 0.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.pet-card1 .pet-details a.btn:hover {
+    background: #e458c4;
+    color: #fff;
+    transform: scale(1.07);
+}
+
 .carousel-btn {
     position: absolute;
     top: 35%;
