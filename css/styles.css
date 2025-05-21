@@ -1921,7 +1921,7 @@ input[type="radio"] {
     flex-direction: column;
     width: 95%;
     max-width: 500px; /* reduced from 1100px */
-    background: #fd1515;
+    background: #ffffff00;
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -1935,7 +1935,7 @@ input[type="radio"] {
 /* Left panel at the top */
 .left-panel {
     width: 100%;
-    background: linear-gradient(145deg, #f1f8e96c, #e0f2f17b);
+    background: linear-gradient(145deg, #71ecff7b, #ffffff00);
     padding: 20px 12px; /* reduced padding */
     display: flex;
     flex-direction: column;
@@ -1946,7 +1946,7 @@ input[type="radio"] {
 }
 
 .left-panel h5 {
-    font-size: 18px; /* reduced from 22px */
+    font-size: 32px; /* reduced from 22px */
     color: #007bff;
     margin-bottom: 16px;
     font-weight: 600;
@@ -1954,7 +1954,7 @@ input[type="radio"] {
 }
 
 .method-selected {
-    background-color: #c5e1a5;
+    background-color: #e3f2fd;
     padding: 8px 16px; /* reduced padding */
     border-radius: 12px;
     font-weight: bold;
