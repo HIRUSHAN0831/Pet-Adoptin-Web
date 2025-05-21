@@ -1611,6 +1611,7 @@ input[type="radio"] {
     width: fit-content;
 }
 
+
 .table-content,
 .form-content {
     background: #fff;
@@ -1630,6 +1631,7 @@ input[type="radio"] {
     table{
         border: 2px solid #007bff88;
         border-collapse: collapse;
+        
     }
     table th {
         background-color: #e3f2fd88;
@@ -1688,6 +1690,7 @@ input[type="radio"] {
     border: 1px solid #0486ff90;
     border-radius: 18px;
     transition: all 0.3s ease-in-out;
+    
 }
 
 .form-content input:focus,
@@ -1697,6 +1700,7 @@ input[type="radio"] {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     background-color: #e3f2fd;
+   
 }                   
 
 .form-content .submitbtn {
