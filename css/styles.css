@@ -1607,6 +1607,11 @@ input[type="radio"] {
     margin:3rem auto;
 }
 
+.requirment-table {
+    width: fit-content;
+}
+
+.table-content,
 .form-content {
     background: #fff;
     padding: 48px 52px;
@@ -1618,10 +1623,41 @@ input[type="radio"] {
     border: 1.5px solid #e0e7ef;
     transition: box-shadow 0.3s;
 }
+
+.table-content {
+    width: fit-content;
+    text-align: center;
+    table{
+        border: 2px solid #007bff88;
+        border-collapse: collapse;
+    }
+    table th {
+        background-color: #e3f2fd88;
+        color: #222;
+        border: 2px solid #007bff88;
+    }
+    table td {
+        border: 2px solid #007bff88;
+    }
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .table-content,
+    .form-section,
+    .form-content{
+        padding: 24px 5px;
+        margin: 1rem;
+        max-width: 315px;
+    }
+}
+
+.table-content:hover,
 .form-content:hover, .form-content:focus-within {
     box-shadow: 0 12px 36px rgba(2, 151, 250, 0.16), 0 2px 12px rgba(236, 72, 153, 0.12);
 }
 
+.table-content h2,
 .form-content h2 {
     color: #007bff;
     font-size: 36px;
