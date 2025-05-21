@@ -380,6 +380,10 @@ nav ul li {
     height: 50vh;
 }
 
+.hero-content {
+    min-margin-top: 90px;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     font-weight: bold;
