@@ -1,3 +1,15 @@
+//Hide the pet name on hover with jQuery
+$(function() {
+    $("div.pet-card1").hover(
+        function() {
+            $(this).find("h3").hide();
+        },
+        function() {
+            $(this).find("h3").show();
+        }
+    );
+});
+
 const PETS_PER_PAGE = 6;
 let currentPage = 1;
 
