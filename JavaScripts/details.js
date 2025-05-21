@@ -13,6 +13,7 @@ $(function() {
 const PETS_PER_PAGE = 6;
 let currentPage = 1;
 
+// Display pets in a grid format
 function displayPets(filteredPets) {
     const petGrid = document.getElementById('petGrid');
     petGrid.innerHTML = '';
@@ -26,6 +27,7 @@ function displayPets(filteredPets) {
         return;
     }
 
+    // Create pet cards inside html
     paginatedPets.forEach(pet => {
         const petCard = document.createElement('div');
         petCard.classList.add('pet-card1');
@@ -53,6 +55,7 @@ function displayPets(filteredPets) {
     updatePagination(filteredPets.length);
 }
 
+// Check if the URL has a search parameter and set the search bar value accordingly
 function checkId() {
     const urlParams = new URLSearchParams(window.location.search);
     const serchBar = document.getElementById('searchInput');
@@ -64,6 +67,7 @@ function checkId() {
     }
 }
 
+// Filter pets based on search input and selected filters
 function filterPets() {
     let search = checkId();
     const type = document.getElementById('typeFilter').value;
@@ -97,6 +101,7 @@ function filterPets() {
     displayPets(filteredPets);
 }
 
+// Update pagination information
 function updatePagination(totalPets) {
     const totalPages = Math.ceil(totalPets / PETS_PER_PAGE);
     document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
@@ -104,16 +109,18 @@ function updatePagination(totalPets) {
     document.getElementById('nextPage').disabled = currentPage === totalPages;
 }
 
+// Call filters and reset to first page
 function filter(){
-    currentPage = 1; // Reset to first page on filter
+    currentPage = 1;
     filterPets();
 }
 
+// Update the pets live
 document.getElementById('searchInput').addEventListener('input', filter);
 document.getElementById('typeFilter').addEventListener('change', filter);
 document.getElementById('ageFilter').addEventListener('change', filter);
 document.getElementById('genderFilter').addEventListener('change', filter);
-
+// Clear filters
 document.getElementById('clearFilters').addEventListener('click', () => {
     document.getElementById('searchInput').value = '';
     document.getElementById('typeFilter').value = 'all';
@@ -126,6 +133,7 @@ document.getElementById('clearFilters').addEventListener('click', () => {
     }
 });
 
+// Pagination buttons
 document.getElementById('prevPage').addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
@@ -141,4 +149,5 @@ document.getElementById('nextPage').addEventListener('click', () => {
     }
 });
 
+// Load pets on page load
 document.addEventListener('DOMContentLoaded', () => filterPets(pets));

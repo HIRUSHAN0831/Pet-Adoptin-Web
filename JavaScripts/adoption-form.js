@@ -1,3 +1,4 @@
+// Add pet IDs to the form
 function addPetIds(){
     const petSelect = document.getElementById('petId');
 
@@ -11,6 +12,7 @@ function addPetIds(){
     });
 }
 
+// Get all form elements
 function getelements(){
     const elements = [
         document.getElementById('fullName'),
@@ -23,18 +25,21 @@ function getelements(){
     return elements;
 }
 
+// Show error message and change color to red
 function showError(element, message) {
     element.className = 'error';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = message;
 }
 
+// Hide error message and change color to green
 function showSuccess(element) {
     element.className = 'success';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = '';
 }
 
+// Check if the field is empty
 function checkEmpty(element) {
     if (element.value.trim() === '') {
         showError(element, 'This field is required.');
@@ -45,6 +50,7 @@ function checkEmpty(element) {
     }
 }
 
+// Check if the phone number is valid
 function checkPhone(element) {
     if (!/^\+?\d{10,15}$/.test(element.value.trim().replace(/\D/g, ''))) {
         showError(element, 'Please enter a valid phone number.');
@@ -55,6 +61,7 @@ function checkPhone(element) {
     }
 }
 
+// Check if the email is valid
 function checkMail(element) {
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(element.value.trim())) {
         showError(element, 'Enter a valid email address.');
@@ -67,6 +74,7 @@ function checkMail(element) {
 
 const form = document.getElementById('adoptionForm');
 
+// Submit
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -81,12 +89,12 @@ form?.addEventListener('submit', (e) => {
     isValid = checkPhone(elements[2]) && isValid;
 
     if (isValid) {
-        // Simulate form submission
         alert('Thank you for your adoption application! We will review it and contact you soon.');
-        form.reset();
+        form.submit();
     }
 });
 
+// Reset the form
 form?.addEventListener('reset', (e) => {
     const elements = getelements();
     for (let element of elements) {
@@ -96,6 +104,7 @@ form?.addEventListener('reset', (e) => {
     }
 });
 
+// Update the form when the user interacts
 {
     const elements = getelements();
     elements.forEach(element => {
@@ -111,7 +120,7 @@ form?.addEventListener('reset', (e) => {
     });
 }
 
-// Preselect pet based on query parameter
+// Preselect pet based on url parameter
 document.addEventListener('DOMContentLoaded', () => {
     addPetIds()
     const urlParams = new URLSearchParams(window.location.search);

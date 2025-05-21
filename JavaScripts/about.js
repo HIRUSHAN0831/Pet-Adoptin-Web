@@ -1,3 +1,4 @@
+// Animate company stats on scroll
 function animateStats() {
     const stats = [
         { id: 'adoptions', end: 500, duration: 2000 },
@@ -20,7 +21,7 @@ function animateStats() {
         }, 16);
     });
 }
-
+// Wait for the impact section to be in view before animating the stats
 function observeStats() {
     const impactSection = document.querySelector('.impact');
     const observer = new IntersectionObserver(entries => {
@@ -35,13 +36,3 @@ function observeStats() {
 document.addEventListener('DOMContentLoaded', () => {
     observeStats();
 });
-
-let counter = 1;
-
-setInterval(() => {
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if (counter > 4) {
-    counter = 1;
-  }
-}, 4000);

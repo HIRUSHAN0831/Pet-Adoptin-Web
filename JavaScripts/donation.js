@@ -1,3 +1,4 @@
+// Change colors when interacting
 document.querySelectorAll('.input').forEach(input => {
   input.addEventListener('focus', () => {
     input.style.backgroundColor = "#f1f8e9";

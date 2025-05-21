@@ -1,3 +1,4 @@
+// Get contact form elements
 function getContactElements() {
     return [
         document.getElementById('name'),
@@ -7,18 +8,21 @@ function getContactElements() {
     ];
 }
 
+// Show error message and change color to red
 function showError(element, message) {
     element.className = 'error';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = message;
 }
 
+// Hide error message and change color to green
 function showSuccess(element) {
     element.className = 'success';
     const msg = element.parentElement.querySelector('small');
     msg.textContent = '';
 }
 
+// Check if the field is empty
 function checkEmpty(element) {
     if (element.value.trim() === '') {
         showError(element, 'This field is required.');
@@ -29,6 +33,7 @@ function checkEmpty(element) {
     }
 }
 
+// Check if the phone number is valid
 function checkMail(element) {
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(element.value.trim())) {
         showError(element, 'Enter a valid email address.');
@@ -41,6 +46,7 @@ function checkMail(element) {
 
 const form = document.getElementById('adoptionForm');
 
+// Submit form
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -59,6 +65,7 @@ form?.addEventListener('submit', (e) => {
     }
 });
 
+// Reset form
 form?.addEventListener('reset', () => {
     const elements = getContactElements();
     for (let element of elements) {
@@ -68,6 +75,7 @@ form?.addEventListener('reset', () => {
     }
 });
 
+// Update the form when the user interacts
 {
     const elements = getContactElements();
     elements.forEach(element => {

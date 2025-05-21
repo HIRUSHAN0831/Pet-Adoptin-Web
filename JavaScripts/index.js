@@ -1,5 +1,6 @@
 let currentIndex = 0;
 
+// Remove pet card with animation
 function removePetCard(cardElement) {
   cardElement.classList.add('fade-out');
   setTimeout(() => {
@@ -7,6 +8,7 @@ function removePetCard(cardElement) {
   }, 1100); // Match the animation duration
 }
 
+// Get ample pet data
 function getVisiblePets(carousel) {
     let noOfCards = 3;
     if (carousel.offsetWidth < 600) {
@@ -22,6 +24,7 @@ function getVisiblePets(carousel) {
     return array;
 }
 
+// Display the pet cards
 function displayCarousel() {
     const carousel = document.getElementById('petCarousel');
     carousel.querySelectorAll('*').forEach(child => {
@@ -49,21 +52,13 @@ function displayCarousel() {
     });
 }
 
+//Move carousel left or right
 function moveCarousel(direction) {
     currentIndex = (currentIndex + direction + pets.length) % pets.length;
     displayCarousel();
 }
 
-// Newsletter form handling
-document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    if (email) {
-        alert('Thank you for subscribing!');
-        document.getElementById('newsletterForm').reset();
-    }
-});
-
+// Update pet cards every 10 seconds
 setInterval(() => moveCarousel(1), 10000);
 
 // Load carousel on page load

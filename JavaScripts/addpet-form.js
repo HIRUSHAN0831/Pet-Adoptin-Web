@@ -1,3 +1,4 @@
+// Get the basic form elements
 function getGiveAwayElements() {
     return [
         document.getElementById('fullName'),
@@ -10,6 +11,7 @@ function getGiveAwayElements() {
         document.getElementById('petBreed'),
     ];
 }
+// Get the pet features elements
 function getFeatures() {
     return [
         document.getElementById('petFeatures1'),
@@ -196,7 +198,7 @@ form?.addEventListener('reset', () => {
     }
 });
 
-// Blur validation
+// Update the form when the user interacts
 {
     const elements = getGiveAwayElements();
     elements.forEach(element => {

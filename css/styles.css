@@ -19,7 +19,11 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
    
-    background-image: url(images/background.jpg);
+    background-image: url("../images/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
 }
 
 /* Responsive Utilities */
@@ -953,10 +957,6 @@ nav ul li {
     background-color: #ff4da6;
 }
 
-/* .contact-item .icon {
-    color: #b99700;
-} */
-
 .icon {
     font-size: 1.5rem;
     color: #ec4899;
@@ -1143,8 +1143,15 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 60vh;
-    background: #f9fafb;
-    
+    background: #f9fafb00;
+    background-image: url('../images/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 #mission-card .card {
@@ -1158,10 +1165,16 @@ footer {
     background: linear-gradient(135deg, #02c4fa 0%, #ff00c8 100%);
     border-radius: 20px;
     overflow: hidden;
-    
+    background: #f9fafb;
     animation: fadeInCard 1s ease-in-out;
     border: none;
-}
+    background: rgb(255, 255, 255);
+        max-width: 700px;
+        margin: 40px;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        text-align: center;}
 
 #mission-card .card-image {
     flex: 1 1 40%;
@@ -1227,6 +1240,11 @@ footer {
     margin-bottom: 0;
    
 }
+
+#mission-card h2 {
+    color: rgb(2, 77, 240);
+        text-align: center;
+        font-weight: bold;}
 
 @media (max-width: 900px) {
     #mission-card .card {
@@ -1394,29 +1412,6 @@ input[type="radio"] {
   border-color: #00f0ff;
   transform: scale(1.2);
 }
-
-
-#radio1:checked ~ .navigation-manual label[for="radio1"]::after,
-#radio2:checked ~ .navigation-manual label[for="radio2"]::after,
-#radio3:checked ~ .navigation-manual label[for="radio3"]::after,
-#radio4:checked ~ .navigation-manual label[for="radio4"]::after {
-  transform: scale(1);
-}
-
-
-#radio1:checked ~ .first {
-  margin-left: 0%;
-}
-#radio2:checked ~ .first {
-  margin-left: -25%;
-}
-#radio3:checked ~ .first {
-  margin-left: -50%;
-}
-#radio4:checked ~ .first {
-  margin-left: -75%;
-}
-
 
 @keyframes fadeInCard {
     from {
@@ -1918,6 +1913,10 @@ input[type="radio"] {
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     padding: 20px;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 .payment-container {
@@ -1925,7 +1924,7 @@ input[type="radio"] {
     flex-direction: column;
     width: 95%;
     max-width: 500px; /* reduced from 1100px */
-    background: #ffffff00;
+    background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
