@@ -1872,7 +1872,6 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(circle, #cfd8dc, #90a4ae);
     font-family: 'Segoe UI', sans-serif;
     padding: 20px;
 }
@@ -1881,13 +1880,13 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     width: 95%;
-    max-width: 1100px;
-    background: #ffffff;
+    max-width: 500px; /* reduced from 1100px */
+    background: #fd151500;
     border-radius: 20px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-}
+} 
 
 .payment-container:hover {
     transform: scale(1.01);
@@ -1896,8 +1895,8 @@ input[type="radio"] {
 /* Left panel at the top */
 .left-panel {
     width: 100%;
-    background: linear-gradient(145deg, #f1f8e9, #e0f2f1);
-    padding: 30px 20px;
+    background: linear-gradient(145deg, #f1f8e96c, #e0f2f17b);
+    padding: 20px 12px; /* reduced padding */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1907,26 +1906,26 @@ input[type="radio"] {
 }
 
 .left-panel h5 {
-    font-size: 22px;
+    font-size: 18px; /* reduced from 22px */
     color: #007bff;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 600;
     text-align: center;
 }
 
 .method-selected {
     background-color: #c5e1a5;
-    padding: 12px 24px;
+    padding: 8px 16px; /* reduced padding */
     border-radius: 12px;
     font-weight: bold;
     color: #2e7d32;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
 .card-icons {
-    margin-top: 20px;
+    margin-top: 12px;
     animation: floatCard 3s ease-in-out infinite;
     display: flex;
     justify-content: center;
@@ -1934,7 +1933,7 @@ input[type="radio"] {
 }
 
 .card-icons img {
-    width: 160px;
+    width: 80px; /* reduced from 160px */
     max-width: 100%;
     border-radius: 14px;
     transition: transform 0.5s ease, box-shadow 0.4s ease;
@@ -1955,23 +1954,23 @@ input[type="radio"] {
 }
 
 .left-panel, .middle-panel, .right-panel {
-    padding: 30px;
+    padding: 20px 12px; /* reduced padding */
 }
 
 .left-panel {
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa00;
     border-radius: 20px 20px 0 0;
 }
 
 .left-panel h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 16px;
+    font-size: 20px; /* reduced from 24px */
 }
 
 .method {
     background-color: #dcedc8;
-    padding: 10px 15px;
+    padding: 8px 10px; /* reduced padding */
     border-radius: 8px;
     font-weight: bold;
     text-align: center;
@@ -1983,8 +1982,8 @@ input[type="radio"] {
 }
 
 .card-icons img {
-    width: 40px;
-    margin: 10px 5px;
+    width: 32px; /* reduced from 40px */
+    margin: 8px 3px;
     transition: transform 0.3s;
 }
 
@@ -1997,16 +1996,16 @@ input[type="radio"] {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* reduced gap */
     border-radius: 0;
 }
 
 .input {
-    padding: 12px;
+    padding: 8px; /* reduced from 12px */
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: all 0.3s;
-    font-size: 16px;
+    font-size: 15px; /* reduced from 16px */
     width: 100%;
 }
 
@@ -2017,11 +2016,11 @@ input[type="radio"] {
 }
 
 .pay-btn {
-    padding: 15px;
+    padding: 10px; /* reduced from 15px */
     background-color: #8bc34a;
     color: #fff;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px; /* reduced from 16px */
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -2036,28 +2035,29 @@ input[type="radio"] {
 /* Right panel at the bottom */
 .right-panel {
     width: 100%;
-    background-color: #fafafa;
+    background-color: #fafafa00;
     border-radius: 0 0 20px 20px;
     border-top: 2px solid #e0e0e0;
     box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
+    padding: 20px 12px; /* reduced padding */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .right-panel h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
+    margin-bottom: 10px; /* reduced from 15px */
+    font-size: 16px; /* reduced from 20px */
 }
 
 .right-panel p {
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* reduced from 15px */
+    font-size: 14px;
 }
 
 .summary-icons img {
-    width: 40px;
-    margin-right: 10px;
+    width: 28px; /* reduced from 40px */
+    margin-right: 6px;
     display: inline-block;
 }
 
@@ -2065,11 +2065,11 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .card-icons img {
-    width: 200px;
+    width: 100px; /* reduced from 200px */
     height: auto;
     display: block;
 }
@@ -2083,7 +2083,7 @@ input[type="radio"] {
         max-width: 99vw;
     }
     .left-panel, .middle-panel, .right-panel {
-        padding: 18px 8px;
+        padding: 12px 4px;
     }
 }
 
@@ -2096,13 +2096,13 @@ input[type="radio"] {
     }
     .left-panel {
         border-radius: 10px 10px 0 0;
-        padding: 12px 4px;
+        padding: 8px 2px;
     }
     .right-panel {
         border-radius: 0 0 10px 10px;
-        padding: 12px 4px;
+        padding: 8px 2px;
     }
     .middle-panel {
-        padding: 12px 4px;
+        padding: 8px 2px;
     }
 }
