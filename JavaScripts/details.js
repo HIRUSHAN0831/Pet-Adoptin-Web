@@ -1,10 +1,10 @@
 //Hide the pet name on hover with jQuery
-$(function() {
+$(function () {
     $("div.pet-card1").hover(
-        function() {
+        function () {
             $(this).find("h3").hide();
         },
-        function() {
+        function () {
             $(this).find("h3").show();
         }
     );
@@ -62,7 +62,7 @@ function checkId() {
     if (urlParams.has('petName')) {
         serchBar.value = urlParams.get('petName');
         return urlParams.get('petName').toLocaleLowerCase();
-    }else {
+    } else {
         return serchBar.value.toLowerCase();
     }
 }
@@ -110,7 +110,7 @@ function updatePagination(totalPets) {
 }
 
 // Call filters and reset to first page
-function filter(){
+function filter() {
     currentPage = 1;
     filterPets();
 }

@@ -2,10 +2,10 @@ let currentIndex = 0;
 
 // Remove pet card with animation
 function removePetCard(cardElement) {
-  cardElement.classList.add('fade-out');
-  setTimeout(() => {
-    cardElement.remove();
-  }, 1100); // Match the animation duration
+    cardElement.classList.add('fade-out');
+    setTimeout(() => {
+        cardElement.remove();
+    }, 1100); // Match the animation duration
 }
 
 // Get ample pet data

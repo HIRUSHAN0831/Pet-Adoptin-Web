@@ -1,5 +1,5 @@
 // Add pet IDs to the form
-function addPetIds(){
+function addPetIds() {
     const petSelect = document.getElementById('petId');
 
     petSelect.innerHTML = '<option value="">Select a Pet</option>'
@@ -13,7 +13,7 @@ function addPetIds(){
 }
 
 // Get all form elements
-function getelements(){
+function getelements() {
     const elements = [
         document.getElementById('fullName'),
         document.getElementById('email'),
